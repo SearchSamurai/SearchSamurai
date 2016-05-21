@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="Windows-31J" ?>
+<!DOCTYPE sqlMapConfig PUBLIC "-//iBATIS.com//DTD SQL Map Config 2.0//EN"
+    "http://www.ibatis.com/dtd/sql-map-config-2.dtd">
+
+<sqlMapConfig>
+	<!-- DB接続設定 -->
+	<transactionManager type="JDBC">
+		<dataSource type="SIMPLE">
+			<property name="JDBC.Driver" value="com.mysql.jdbc.Driver"/>
+            <property name="JDBC.ConnectionURL" value="jdbc:mysql://133.242.158.112:13306/test"/>
+            <property name="JDBC.Username" value="senkyo" />
+            <property name="JDBC.Password" value="2d9fd16d" />
+			<property name="JDBC.DefaultAutoCommit" value="false"/>
+		</dataSource>
+	</transactionManager>
+	<!-- sqlMapファイルの参照 -->
+	<sqlMap resource="jp/co/koh/ibatis/sql/Koh.xml" />
+	<sqlMap resource="jp/co/koh/ibatis/sql/User.xml" />
+</sqlMapConfig>

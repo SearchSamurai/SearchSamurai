@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+    "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="Koh">
+	<!-- 武士テーブルにレコードを登録 -->
+<insert id="addKoh"
+          parameterClass="java.util.Map">
+   INSERT INTO BUSHI(
+    BUSHI_ID,
+    NAME,
+    AGE,
+    BUSHI_GROUP,
+    BIRTH_PLACE,
+    UNIT_PRICE,
+    WEAPON,
+    INST_ID,
+    INST_DATE
+    )VALUES (
+        #form.bushiId#,
+        #form.name#,
+        #form.age#,
+        #form.bushiGroup#,
+        #form.birthPlace#,
+        #form.unitPrice#,
+        #form.weapon#,
+        #instId#,
+        sysdate()
+    )
+  </insert>
+   <!-- 登録NULLcheck -->
+   <select id="addKohNullCheck"  parameterClass="java.util.Map"
+          resultClass="java.lang.Integer">
+	SELECT
+        COUNT(*)
+    FROM
+        BUSHI AS B
+    WHERE
+    	B.BUSHI_ID=#form.bushiId#
+  </select>
+
+  <!-- 検索用SQL -->
+  <select id="findKoh" resultClass="jp.co.koh.ibatis.dto.Koh">
+
+		SELECT
+			B.BUSHI_ID AS bushiId,
+			B.NAME AS name,
+			B.AGE AS age,
+			B.BUSHI_GROUP AS bushiGroup,
+			B.BIRTH_PLACE AS birthPlace,
+			B.UNIT_PRICE AS unitPrice,
+			B.WEAPON AS weapon,
+			B.INST_DATE AS instDate
+		FROM
+			BUSHI B
+
+		<dynamic prepend="WHERE">
+
+			<isNotEmpty property="form.ageFrom" prepend="AND">
+			<![CDATA[
+			B.AGE >= #form.ageFrom#
+			]]>
+			</isNotEmpty>
+
+			<isNotEmpty property="form.ageTo" prepend="AND">
+			<![CDATA[
+			B.AGE <= #form.ageTo#
+			]]>
+			</isNotEmpty>
+
+			<isNotEmpty property="form.groupList" prepend="AND">
+			B.BUSHI_GROUP = #form.groupList#
+			</isNotEmpty>
+
+			<isNotEmpty property="form.unitPriceFrom" prepend="AND">
+			<![CDATA[
+			B.UNIT_PRICE >= #form.unitPriceFrom#
+			]]>
+			</isNotEmpty>
+
+			<isNotEmpty property="form.unitPriceTo" prepend="AND">
+			<![CDATA[
+			B.UNIT_PRICE <= #form.unitPriceTo#
+			]]>
+			</isNotEmpty>
+
+			<isNotEmpty property="form.weaponList" prepend="AND">
+			B.WEAPON = #form.weaponList#
+			</isNotEmpty>
+
+		</dynamic>
+
+		ORDER BY
+			B.BUSHI_ID
+
+		LIMIT
+			#form.limit#
+
+		OFFSET
+			#form.offset#
+
+	</select>
+
+  <!-- 検索用SQL(登録日時の新しい順にソート) -->
+  <select id="findKohSortByInstDate" resultClass="jp.co.koh.ibatis.dto.Koh">
+
+		SELECT
+			B.BUSHI_ID AS bushiId,
+			B.NAME AS name,
+			B.AGE AS age,
+			B.BUSHI_GROUP AS bushiGroup,
+			B.BIRTH_PLACE AS birthPlace,
+			B.UNIT_PRICE AS unitPrice,
+			B.WEAPON AS weapon,
+			B.INST_DATE AS instDate
+		FROM
+			BUSHI B
+
+		<dynamic prepend="WHERE">
+
+			<isNotEmpty property="form.ageFrom" prepend="AND">
+			<![CDATA[
+			B.AGE >= #form.ageFrom#
+			]]>
+			</isNotEmpty>
+
+			<isNotEmpty property="form.ageTo" prepend="AND">
+			<![CDATA[
+			B.AGE <= #form.ageTo#
+			]]>
+			</isNotEmpty>
+
+			<isNotEmpty property="form.groupList" prepend="AND">
+			B.BUSHI_GROUP = #form.groupList#
+			</isNotEmpty>
+
+			<isNotEmpty property="form.unitPriceFrom" prepend="AND">
+			<![CDATA[
+			B.UNIT_PRICE >= #form.unitPriceFrom#
+			]]>
+			</isNotEmpty>
+
+			<isNotEmpty property="form.unitPriceTo" prepend="AND">
+			<![CDATA[
+			B.UNIT_PRICE <= #form.unitPriceTo#
+			]]>
+			</isNotEmpty>
+
+			<isNotEmpty property="form.weaponList" prepend="AND">
+			B.WEAPON = #form.weaponList#
+			</isNotEmpty>
+
+		</dynamic>
+
+		ORDER BY
+			B.INST_DATE DESC
+
+		LIMIT
+			#form.limit#
+
+		OFFSET
+			#form.offset#
+
+	</select>
+
+  <!-- 検索結果数取得用SQL -->
+  <select id="countSearchResult" resultClass="java.lang.String" parameterClass="jp.co.koh.form.KohSearchActionForm">
+
+	SELECT
+
+		COUNT(bushiId) AS countSearchResult
+
+	FROM
+
+		(SELECT
+
+			B.BUSHI_ID AS bushiId
+
+		FROM
+
+			BUSHI B
+
+		<dynamic prepend="WHERE">
+
+			<isNotEmpty property="ageFrom" prepend="AND">
+			<![CDATA[
+			B.AGE >= #ageFrom#
+			]]>
+			</isNotEmpty>
+
+			<isNotEmpty property="ageTo" prepend="AND">
+			<![CDATA[
+			B.AGE <= #ageTo#
+			]]>
+			</isNotEmpty>
+
+			<isNotEmpty property="groupList" prepend="AND">
+			B.BUSHI_GROUP = #groupList#
+			</isNotEmpty>
+
+			<isNotEmpty property="unitPriceFrom" prepend="AND">
+			<![CDATA[
+			B.UNIT_PRICE >= #unitPriceFrom#
+			]]>
+			</isNotEmpty>
+
+			<isNotEmpty property="unitPriceTo" prepend="AND">
+			<![CDATA[
+			B.UNIT_PRICE <= #unitPriceTo#
+			]]>
+			</isNotEmpty>
+
+			<isNotEmpty property="weaponList" prepend="AND">
+			B.WEAPON = #weaponList#
+			</isNotEmpty>
+
+		</dynamic>
+
+
+		) AS countSearchResultTable
+
+
+	</select>
+
+
+  <!-- 武器リスト取得用SQL(検索用) -->
+  <select id="findWeaponList" resultClass="jp.co.koh.ibatis.dto.Koh">
+
+		SELECT DISTINCT
+			B.WEAPON AS weaponList
+		FROM
+			BUSHI B
+		WHERE
+			B.WEAPON IS NOT NULL
+		AND
+			B.WEAPON != ''
+		ORDER BY
+			B.BUSHI_ID
+
+  </select>
+
+  <!-- 所属リスト取得用SQL(検索用) -->
+  <select id="findGroupList" resultClass="jp.co.koh.ibatis.dto.Koh">
+
+		SELECT DISTINCT
+			B.BUSHI_GROUP AS groupList
+		FROM
+			BUSHI B
+		WHERE
+			B.BUSHI_GROUP IS NOT NULL
+		AND
+			B.BUSHI_GROUP != ''
+		ORDER BY
+			B.BUSHI_ID
+
+  </select>
+
+  <!-- 削除検索用SQL -->
+  <select id="kohDeleteCheck" resultClass="jp.co.koh.form.KohDeleteActionForm">
+
+		SELECT
+			B.BUSHI_ID AS bushiId,
+			B.NAME AS name,
+			B.AGE AS age,
+			B.BUSHI_GROUP AS bushiGroup,
+			B.BIRTH_PLACE AS birthPlace,
+			B.UNIT_PRICE AS unitPrice,
+			B.WEAPON AS weapon
+		FROM
+			BUSHI B
+		WHERE
+		    B.BUSHI_ID = #form.bushiId#
+
+  </select>
+
+  	<!--削除sql-->
+		<delete id="kohDelete" parameterClass="java.util.Map">
+		DELETE FROM BUSHI
+		WHERE BUSHI_ID = #bushiId#
+		</delete>
+
+</sqlMap>

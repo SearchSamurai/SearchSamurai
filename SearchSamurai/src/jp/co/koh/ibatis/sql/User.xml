@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+    "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="BUSHI_user">
+	<!-- ユーザ管理テーブルからユーザーIDに紐ついたレコードを取得 -->
+	<select id="findUser" resultClass="jp.co.koh.ibatis.dto.User">
+		SELECT
+			bu.user_id userId,
+			bu.user_pass userPassword
+		FROM
+			BUSHI_user bu
+		WHERE
+			bu.user_id = #userId#
+	</select>
+
+	<insert id="addUser"
+				 parameterClass="java.util.Map">
+		INSERT INTO BUSHI_user(
+			user_id,
+			user_pass,
+			regist_name,
+			regist_date
+		)VALUES(
+			#userId#,
+			#userPassword#,
+			#registName#,
+			sysdate()
+		)
+	</insert>
+
+	<!-- ユーザ管理テーブルからIDとpass取得 -->
+	<select id="findUserList" resultClass="jp.co.koh.form.LoginActionForm">
+		SELECT
+			bu.user_id userId,
+			bu.user_pass userPassword
+		FROM
+			BUSHI_user bu
+	</select>
+
+	<!-- ユーザ管理テーブルからpass更新-->
+	<update id="UserUpd" parameterClass="java.util.Map">
+		UPDATE BUSHI_user
+		SET
+			user_pass = #userPassword#
+		WHERE user_id = #userId#
+
+	</update>
+
+
+
+</sqlMap>

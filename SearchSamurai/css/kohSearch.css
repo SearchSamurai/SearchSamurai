@@ -1,0 +1,42 @@
+body {
+	font-family: "ÉqÉâÉMÉmäpÉS Pro W3", "Hiragino Kaku Gothic Pro", "MS P ÉSÉVÉbÉN", "MS P Gothic", sans-Serif;
+	margin: 0;
+	padding: 0;
+	font-size: 15px;
+	color: #333;
+	background-color: #EFFBF8;
+}
+
+div#wrapper {
+    width: 1065px;
+    margin: 50 auto;
+    text-align: left;
+}
+
+div#wrapper2 {
+    width: 855px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+div#wrapper3 {
+    width: 1115px;
+    margin: 5 auto;
+    text-align: left;
+}
+
+.asciiArt_area {
+	font-size: 20px;
+	color: red;
+	font-weight: bold;background;
+}
+
+.input_koh {
+	border-collapse:collapse;
+	border:solid #CCC 1px;
+}
+
+.input_koh TD {
+	border:solid #CCC 1px;
+	padding:5px;
+}

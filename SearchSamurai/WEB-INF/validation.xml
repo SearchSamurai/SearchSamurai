@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="Windows-31J" ?>
+<!DOCTYPE form-validation PUBLIC
+     "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.3.0//EN"
+     "http://jakarta.apache.org/commons/dtds/validator_1_3_0.dtd">
+
+<form-validation>
+	<formset>
+	<!-- 登録のvalidation  -->
+	<form name="KohRegistActionForm">
+			<!-- 武士IDのvalidation  -->
+			<field property="bushiId" depends="required, maxlength, mask">
+				<msg name="required" key="errors.required" />
+				<msg name="maxlength" key="errors.keta" />
+				<msg name="mask" key="errors.hansuu" />
+				<arg position="0" key="武士ID" resource="false" />
+				<arg position="1" key="${var:maxlength}" resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[0-9]+$</var-value>
+				</var>
+			</field>
+			<!-- 名前のvalidation  -->
+			<field property="name" depends="required, maxlength, mask">
+				<msg name="required" key="errors.required" />
+				<msg name="maxlength" key="errors.keta" />
+				<msg name="mask" key="errors.kanjihira" />
+				<arg position="0" key="名前" resource="false" />
+				<arg position="1" key="${var:maxlength}" resource="false" />
+				<arg position="4" key="漢字かひらがな" resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>10</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[^0-9a-zA-Z]+$</var-value>
+				</var>
+			</field>
+			<!-- 年齢のvalidation  -->
+			<field property="age" depends="required, maxlength, mask, intRange">
+				<msg name="required" key="errors.required" />
+				<msg name="maxlength" key="errors.intrange" />
+				<msg name="mask" key="errors.hansuu" />
+				<msg name="intRange" key="errors.intrange" />
+				<arg position="0" key="年齢" resource="false" />
+				<arg position="2" key="${var:min}歳(元服から)" resource="false" />
+				<arg position="3" key="${var:max}歳(定年まで)" resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[0-9]+$</var-value>
+				</var>
+				<var>
+					<var-name>min</var-name>
+					<var-value>15</var-value>
+				</var>
+				<var>
+					<var-name>max</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			<!-- 所属隊のvalidation  -->
+			<field property="bushiGroup" depends="mask, maxlength">
+				<msg name="mask" key="errors.kanjihira" />
+				<msg name="maxlength" key="errors.keta" />
+				<arg position="0" key="所属隊" resource="false" />
+				<arg position="4" key="漢字かひらがな" resource="false" />
+				<arg position="1" key="${var:maxlength}" resource="false" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[^0-9a-zA-Z]+$</var-value>
+				</var>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>10</var-value>
+				</var>
+			</field>
+			<!-- 出身地のvalidation  -->
+			<field property="birthPlace" depends="maxlength, mask">
+				<msg name="maxlength" key="errors.keta" />
+				<msg name="mask" key="errors.kanjihira" />
+				<arg position="0" key="出身地" resource="false" />
+				<arg position="1" key="${var:maxlength}" resource="false" />
+				<arg position="4" key="漢字かひらがな" resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>10</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[^0-9a-zA-Z]+$</var-value>
+				</var>
+			</field>
+			<!-- 単価のvalidation  -->
+			<field property="unitPrice" depends="required, maxlength, mask">
+				<msg name="required" key="errors.required" />
+				<msg name="maxlength" key="errors.keta" />
+				<msg name="mask" key="errors.hansuu" />
+				<arg position="0" key="単価" resource="false" />
+				<arg position="1" key="${var:maxlength}" resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>9</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[0-9]+$</var-value>
+				</var>
+			</field>
+			<!-- 武器のvalidation  -->
+			<field property="weapon" depends="maxlength, mask">
+				<msg name="maxlength" key="errors.weaponcheck" />
+				<msg name="mask" key="errors.weaponcheck" />
+				<arg position="0" key="武器" resource="false" />
+				<arg position="1" key="${var:maxlength}" resource="false" />
+				<arg position="5" key="刀、槍、弓、銃" resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>1</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[刀弓銃槍]+$</var-value>
+				</var>
+			</field>
+		</form>
+
+	<!-- ユーザー登録のvalidation  -->
+	 	<form name="UserRegistActionForm">
+			<field property="userId" depends="maxlength, mask">
+			 	<msg name="maxlength" key="errors.maxlength" />
+				<msg name="mask" key="errors.haneisuu" />
+				<arg position="0" key="武士ID" resource="false" />
+				<arg position="1" key="${var:maxlength}" resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>4</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[a-zA-Z0-9]+$</var-value>
+				</var>
+			</field>
+
+		 	 <field property="userPassword" depends="maxlength, mask">
+				<msg name="maxlength" key="errors.maxlength" />
+				<msg name="mask" key="errors.haneisuu" />
+				<arg position="0" key="パスワード" resource="false" />
+				<arg position="1" key="${var:maxlength}" resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>8</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[a-zA-Z0-9]+$</var-value>
+				</var>
+			</field>
+		</form>
+
+	<!-- ログインのvalidation  -->
+	 	<form name="LoginActionForm">
+			<field property="userId" depends="required, maxlength, mask">
+				<msg name="required" key="errors.required" />
+			 	<msg name="maxlength" key="errors.maxlength" />
+				<msg name="mask" key="errors.haneisuu" />
+				<arg position="0" key="武士ID" resource="false" />
+				<arg position="1" key="${var:maxlength}" resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[a-zA-Z0-9]+$</var-value>
+				</var>
+			</field>
+
+		 	 <field property="userPassword" depends="required, maxlength, mask">
+				<msg name="required" key="errors.required" />
+				<msg name="maxlength" key="errors.maxlength" />
+				<msg name="mask" key="errors.haneisuu" />
+				<arg position="0" key="パスワード" resource="false" />
+				<arg position="1" key="${var:maxlength}" resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[a-zA-Z0-9]+$</var-value>
+				</var>
+			</field>
+		</form>
+		<!-- 削除のvalidation  -->
+	<form name="KohDeleteActionForm">
+			<!-- 武士IDのvalidation  -->
+			<field property="bushiId" depends="required, maxlength, mask">
+				<msg name="required" key="errors.required" />
+				<msg name="maxlength" key="errors.keta" />
+				<msg name="mask" key="errors.hansuu" />
+				<arg position="0" key="武士ID" resource="false" />
+				<arg position="1" key="${var:maxlength}" resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>3</var-value>
+				</var>
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[0-9]+$</var-value>
+				</var>
+			</field>
+			</form>
+
+	</formset>
+</form-validation>

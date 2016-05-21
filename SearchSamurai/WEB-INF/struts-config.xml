@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="WINDOWS-31J" ?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="LoginActionForm" type="jp.co.koh.form.LoginActionForm"/>
+		<form-bean name="LogoutActionForm" type="jp.co.koh.form.LogoutActionForm" />
+		<form-bean name="UserRegistActionForm" type="jp.co.koh.form.UserRegistActionForm" />
+		<form-bean name="KohRegistActionForm" type="jp.co.koh.form.KohRegistActionForm"/>
+		<form-bean name="KohSearchActionForm" type="jp.co.koh.form.KohSearchActionForm"/>
+		<form-bean name="KohDeleteActionForm" type="jp.co.koh.form.KohDeleteActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/LoginAction"
+				forward="/pages/top.jsp"
+		        type="jp.co.koh.action.LoginAction"
+		        name="LoginActionForm"
+		        scope="request"
+		        input="/pages/top.jsp"
+		        validate="true">
+			<forward name="success" path="/pages/parts/menu.jsp" />
+			<forward name="input" path="/pages/top.jsp" />
+			<forward name="error" path="/pages/error.jsp" />
+		</action>
+
+		<!-- ユーザー登録のアクションタグ -->
+		<action path="/UserRegistAction"
+				type="jp.co.koh.action.UserRegistAction"
+				name="UserRegistActionForm" scope="request"
+				validate="true"
+				input="/pages/userRegist.jsp">
+			<forward name="success" path="/pages/kohRegistCheckResult.jsp" />
+			<forward name="input" path="/pages/userRegist.jsp" />
+			<forward name="error" path="/error.jsp" />
+		</action>
+
+		<action path="/LogoutAction"
+				forward="/pages/top.jsp"
+				type="jp.co.koh.action.LogoutAction"
+				name="LogoutActionForm"
+				scope="request"
+				validate="true"
+				input="/pages/parts/menu.jsp">
+			<forward name="success" path="/pages/top.jsp" />
+			<forward name="error" path="/error.jsp" />
+		</action>
+
+		<!-- 登録のアクションタグ -->
+		<action path="/KohRegistAction"
+		        type="jp.co.koh.action.KohRegistAction"
+		        name="KohRegistActionForm"
+		        scope="request"
+		        validate="false">
+			<forward name="success" path="/pages/kohRegistCheckResult.jsp" />
+
+		</action>
+
+		<!-- 登録checkのアクションタグ -->
+		<action path="/KohRegistCheckAction"
+		        type="jp.co.koh.action.KohRegistCheckAction"
+		        name="KohRegistActionForm"
+		        scope="request"
+		        input="/pages/kohRegist.jsp"
+		        validate="true">
+			<forward name="success" path="/pages/kohRegistCheck.jsp" />
+			<forward name="error" path="/pages/kohRegist.jsp" />
+		</action>
+
+		<!-- 削除checkのアクションタグ -->
+		<action path="/KohDeleteCheckAction"
+		        type="jp.co.koh.action.KohDeleteCheckAction"
+		        name="KohDeleteActionForm"
+		        scope="request"
+		        input="/pages/kohDelete.jsp"
+		        validate="true">
+			<forward name="success" path="/pages/kohDeleteCheck.jsp" />
+			<forward name="error" path="/pages/kohDelete.jsp" />
+		</action>
+
+		<!-- 削除のアクションタグ -->
+		<action path="/KohDeleteAction"
+		        type="jp.co.koh.action.KohDeleteAction"
+		        name="KohDeleteActionForm"
+		        scope="request"
+		        validate="false">
+			<forward name="success" path="/pages/kohRegistCheckResult.jsp" />
+		</action>
+
+
+		<!-- 検索のアクションタグ -->
+		<action path="/KohSearchAction"
+		        type="jp.co.koh.action.KohSearchAction"
+		        name="KohSearchActionForm"
+		        scope="request">
+			<forward name="success" path="/pages/kohSearch.jsp" />
+		</action>
+
+		<!-- User一覧のアクションタグ -->
+		<action path="/KohUserAllAction"
+		        type="jp.co.koh.action.KohUserAllAction"
+		        name="LoginActionForm"
+		        input="/pages/kohUserAll.jsp"
+		        scope="request">
+			<forward name="success" path="/pages/kohUserAll.jsp" />
+		</action>
+
+		<!-- javascript練習用ののアクションタグ -->
+		<action path="/KohUserAllAction"
+		        type="jp.co.koh.action.KohUserAllAction"
+		        name="LoginActionForm"
+		        input="/pages/kohUserAll.jsp"
+		        scope="request">
+			<forward name="success" path="/pages/kohRegistCheckResult.jsp" />
+			<forward name="error" path="/pages/kohjavascript.jsp" />
+		</action>
+
+	</action-mappings>
+
+<!-- ======================================== Message Resources Definitions -->
+    <!--プロパティファイルのある場所を指定します-->
+    <!--parameterはpathを含むファイル名を入れます-->
+	<message-resources parameter="application" />
+<!-- =================================================== Validator plugin -->
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames" value="/org/apache/struts/validator/validator-rules.xml, /WEB-INF/validation.xml" />
+	</plug-in>
+</struts-config>
