@@ -6,17 +6,17 @@
 	<!-- ユーザ管理テーブルからユーザーIDに紐ついたレコードを取得 -->
 	<select id="findUser" resultClass="jp.co.koh.ibatis.dto.User">
 		SELECT
-			bu.user_id userId,
-			bu.user_pass userPassword
+			BUO.user_id userId,
+			BUO.user_pass userPassword
 		FROM
-			BUSHI_user bu
+			BUSHI_user_OKA BUO
 		WHERE
-			bu.user_id = #userId#
+			BUO.user_id = #userId#
 	</select>
 
 	<insert id="addUser"
 				 parameterClass="java.util.Map">
-		INSERT INTO BUSHI_user(
+		INSERT INTO BUSHI_user_OKA(
 			user_id,
 			user_pass,
 			regist_name,
@@ -32,15 +32,15 @@
 	<!-- ユーザ管理テーブルからIDとpass取得 -->
 	<select id="findUserList" resultClass="jp.co.koh.form.LoginActionForm">
 		SELECT
-			bu.user_id userId,
-			bu.user_pass userPassword
+			BUO.user_id userId,
+			BUO.user_pass userPassword
 		FROM
-			BUSHI_user bu
+			BUSHI_user_OKA BUO
 	</select>
 
 	<!-- ユーザ管理テーブルからpass更新-->
 	<update id="UserUpd" parameterClass="java.util.Map">
-		UPDATE BUSHI_user
+		UPDATE BUSHI_user_OKA
 		SET
 			user_pass = #userPassword#
 		WHERE user_id = #userId#
