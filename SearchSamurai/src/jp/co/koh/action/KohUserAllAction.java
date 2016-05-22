@@ -32,7 +32,6 @@ public final class KohUserAllAction extends BaseAction {
     /**
      * 武士帳登録Actionメイン処理。
      */
-
     public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest req, HttpServletResponse res) {
 
         //画面に最初から値を出力するテストの為だけに作ったので特に処理なし
