@@ -33,7 +33,6 @@ public final class KohSearchAction extends BaseAction {
 	private static final Logger log = Logger.getLogger(KohSearchActionForm.class);
 	/** Daoクラス */
 	private KohDao kohDao = new KohDao(sqlMap);
-
 	/**
 	 * 武士帳検索アクションクラスのメイン処理。
 	 */
