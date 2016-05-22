@@ -173,6 +173,7 @@ public final class KohSearchAction extends BaseAction {
 		for (int i = 0; i < pages; i++) {
 			allpages[i] = i + 1;
 		}
+
 		kohSearchActionForm.setAllpages(allpages);
 
 	}
