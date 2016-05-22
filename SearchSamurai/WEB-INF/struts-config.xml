@@ -2,6 +2,7 @@
 <!DOCTYPE struts-config PUBLIC
           "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
           "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
 <struts-config>
 	<form-beans>
 		<form-bean name="LoginActionForm" type="jp.co.koh.form.LoginActionForm"/>
