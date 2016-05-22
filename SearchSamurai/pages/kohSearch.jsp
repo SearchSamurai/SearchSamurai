@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=MS932" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="/tags/struts-html" prefix="html" %>
 <%@ taglib uri="/tags/struts-bean" prefix="bean" %>
 <%@ taglib uri="/tags/struts-logic" prefix="logic" %>
@@ -11,41 +11,41 @@
 <%@ page import="java.sql.SQLException" %>
 <%@ page import="java.io.Reader" %>
 <link rel="StyleSheet" href="/koh/css/kohSearch.css" type="text/css">
-<script type="text/javascript" src="/koh/js/kohSearch.js" charset="MS932"></script>
+<script type="text/javascript" src="/koh/js/kohSearch.js" charset="UTF-8"></script>
 
 
 <html:html>
 
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>∙░▌m▓═</title>
+		<title>Ф╜╕Её╚Е╦Ё</title>
 		<link rel="shortcut icon" href="/koh/img/favicon.ico">
 	</head>
 
 	<body>
 
 	<div id="wrapper">
-		<h1>∙░▌m▓═</h1>
-		<h2>∙░▌m▄÷█У┌и┌д▄С</h2>
+		<h1>Ф╜╕Её╚Е╦Ё</h1>
+		<h2>Ф╜╕Её╚Ф╓°Г╢╒Ц│╚Ц│╕Е─≥</h2>
 		<br>
-			<h3>▄÷█У▐П▄▐┌П⌠Э≈м┌Ё┌Й┌╫┌╣</h3>
+			<h3>Ф╓°Г╢╒Ф²║Д╩╤Ц┌▓Е┘╔Е┼⌡Ц│∙Ц┌▄Ц│÷Ц│≈</h3>
 	</div>
 
 	<div id="wrapper">
 		<html:form action="/KohSearchAction" method="POST">
 
        		<tr>
-      			<td>≈Н<br></td>
+      			<td>И╫╒<br></td>
         		<td>
        		 	<html:text property="ageFrom" size="20" maxlength="3" value=""/></td>
-        		<td>│`</td>
+        		<td>О╫·</td>
         		<td><html:text property="ageTo" size="20" maxlength="3" value=""/></td>
-       		 	<td>█н</td>
+       		 	<td>Ф╜Ё</td>
       	     </tr>
 			 <br><br><br>
 
        		 <tr>
-        		<td>▐┼▒╝<br></td>
+        		<td>Ф┴─Е╠·<br></td>
 					<html:select property="groupList" style="width:173px">
 						<html:options collection="<%=SystemConst.SESSION_KEY.KOH_GROUP_LIST%>" property="groupList"/>
 					</html:select>
@@ -53,16 +53,16 @@
 			<br><br><br>
 
        		<tr>
-        		<td>▓P┴©<br></td>
+        		<td>Е█≤Д╬║<br></td>
         		<td><html:text property="unitPriceFrom" size="20" maxlength="9" value=""/></td>
-        		<td>│`</td>
+        		<td>О╫·</td>
 	        	<td><html:text property="unitPriceTo" size="20" maxlength="9" value=""/></td>
-	        	<td>┴~</td>
+	        	<td>Е├├</td>
 	        </tr>
 			<br><br><br>
 
 	        <tr>
-	        	<td>∙░┼М<br></td>
+	        	<td>Ф╜╕Е≥╗<br></td>
 	        	<td>
 					<html:select property="weaponList" style="width:173px">
 						<html:options collection="<%=SystemConst.SESSION_KEY.KOH_WEAPON_LIST%>" property="weaponList"/>
@@ -71,48 +71,48 @@
 	        </tr>
 	        <br><br><br>
 
-			<td>∙ю┌в▒ж┌╕┌и┌д▄С<br></td>
-			<td>│╕▄÷█У▒O┌е┌Ю▄÷█У▄Ц┌е┌Ю░щ▓Х┴б■\┌и┌д▄С<br></td>
+			<td>Д╦╕Ц│╧Ф⌡©Ц│┬Ц│╚Ц│╕Е─≥<br></td>
+			<td>Б─╩Ф╓°Г╢╒Е┴█Ц│╖Ц┌┌Ф╓°Г╢╒Е╬▄Ц│╖Ц┌┌Х╗╜Е╝ Е▐╞Х┐╫Ц│╚Ц│╕Е─≥<br></td>
 
 	        <select name="sortFlag" style="width:173px">
 				<option value="0"></option>
-				<option value="1">⌠o≤^⌠З▌·┌╙░V┌╣┌╒▐┤┌и┌д▄С</option>
-				<%--<option value="2">┐e┐X┐g</option>--%>
+				<option value="1">Г≥╩И▄╡Ф≈╔Ф≥┌Ц│▄Ф√╟Ц│≈Ц│└И═├Ц│╚Ц│╕Е─≥</option>
+				<%--<option value="2">Ц┐├Ц┌╧Ц┐┬</option>--%>
 			</select>
 			<br><br><br>
 
-			<html:submit property="submit" value=" ▄÷█У " />
+			<html:submit property="submit" value=" Ф╓°Г╢╒ " />
 
-			<INPUT type="button" onClick="clearFormAll()" value=" ▄÷█У▐П▄▐▐┴┼З┴╩┌и┌д▄С "/>
+			<INPUT type="button" onClick="clearFormAll()" value=" Ф╓°Г╢╒Ф²║Д╩╤Е┬²Ф°÷Е▄√Ц│╚Ц│╕Е─≥ "/>
 
 			<pre>
 				<div id="characterAnimation" class="asciiArt_area" style=width:1000px;height:120px;>
-│╪⌠Я⌠Я⌠Я│i │O┐ж│O│j⌠Я│╫							│╪⌠Я⌠Я⌠Я│i │O┐ж│O│j⌠Я│╫
-         |      /       лч╟---щwwwwww			                         |      /       лч╟---щwwwwww
-        │i  │R┐m								│i  │R┐m
-           и>┐m							 		   и>┐m
-   ▌O     ┐▄з			  			                   ▌O     ┐▄з
+Б┼┌Д╨▄Д╨▄Д╨▄О╪┬ О╪╬о┴О╪╬О╪┴Д╨▄Б┼┐							Б┼┌Д╨▄Д╨▄Д╨▄О╪┬ О╪╬о┴О╪╬О╪┴Д╨▄Б┼┐
+         |      /       О╬▄О╬·О╫╟---О╬²wwwwww			                         |      /       О╬▄О╬·О╫╟---О╬²wwwwww
+        О╪┬  Ц┐╫Ц┐▌								О╪┬  Ц┐╫Ц┐▌
+           О╬┴>Ц┐▌							 		   О╬┴>Ц┐▌
+   Д╦┴     Ц┐╛О╬ 			  			                   Д╦┴     Ц┐╛О╬ 
 				</div>
 			</pre>
 
 
-			<%--▄÷█У▄▀┴й▄▐░■ --%>
+			<%--Ф╓°Г╢╒Г╣░Ф·°Д╩╤Ф∙╟ --%>
 			<logic:notEmpty name="searchCnt" scope="request" >
 				<div id="wrapper2">
 					<logic:equal name="searchCnt" value="0" scope="request">
-					▄÷█У▐П▄▐┌и┼Y⌠√┌╥┌И∙░▌m┌м▄╘⌠√┌╫┌Х┌э┌╧┌й<br><br>
+					Ф╓°Г╢╒Ф²║Д╩╤Ц│╚Х╘╡Е╫⌠Ц│≥Ц┌▀Ф╜╕Её╚Ц│╞Х╕▀Е╫⌠Ц│÷Ц┌┼Ц│╬Ц│⌡Ц│╛<br><br>
 					</logic:equal>
 				</div>
 
 
 				<logic:notEqual name="searchCnt" value="0" scope="request">
 					<div id="wrapper2">
-						<b><bean:write name="searchCnt" scope="request"  /></b>▄▐┌л┼Y⌠√┌╥┌И∙░▌m┌П┬х┴╨┌и▌╕┌╣░\┌╣▄С
+						<b><bean:write name="searchCnt" scope="request"  /></b>Д╩╤Ц│╝Х╘╡Е╫⌠Ц│≥Ц┌▀Ф╜╕Её╚Ц┌▓Д╩╔Д╦▀Ц│╚Г╓╨Ц│≈Г■ЁЦ│≈Е─≥
 						<br><br><br>
 					</div>
 
 					<div id="wrapper2">
-						<%--┐y│[┐W┐┐│[--%>
+						<%--Ц┐ Ц┐╪Ц┌╦Ц┐ёЦ┐╪--%>
 						<% int pageNo = ((KohSearchActionForm) request.getAttribute(SystemConst.SESSION_KEY.KOH_SEARCH_ACTION_FORM)).getPages(); %>
 						<logic:iterate id="koh" name="KohSearchActionForm" property="allpages" indexId="i">
 							<% if (pageNo == i.intValue()) { %>
@@ -141,13 +141,13 @@
 
 					<tr align="center">
 						<td width="10%">ID</td>
-						<td width="10%">√╪▒O</td>
-						<td width="10%">■N≈Н</td>
-						<td width="10%">▐┼▒╝</td>
-						<td width="10%">▐o░g</td>
-						<td width="10%">▓P┴©</td>
-						<td width="10%">∙░┼М</td>
-						<td width="10%">⌠o≤^⌠З▌·</td>
+						<td width="10%">Е░█Е┴█</td>
+						<td width="10%">Е╧╢И╫╒</td>
+						<td width="10%">Ф┴─Е╠·</td>
+						<td width="10%">Е┤╨Х╨╚</td>
+						<td width="10%">Е█≤Д╬║</td>
+						<td width="10%">Ф╜╕Е≥╗</td>
+						<td width="10%">Г≥╩И▄╡Ф≈╔Ф≥┌</td>
 					</tr>
 
 
@@ -184,12 +184,12 @@
 			</logic:notEmpty>
 
 			<div id="wrapper3">
-				<%--┼e┴Ф√й┌ж┌л┐┼┐⌠┐N --%>
+				<%--Е░└Г■╩И²╒Ц│╦Ц│╝Ц┐╙Ц┐ЁЦ┌╞ --%>
 				<ul type="disc">
-					<li><a href="/koh/pages/kohRegist.jsp">∙░▌m▓═ ⌠o≤^┴Ф√й┌ж█s┌╚┌Ю┌╓┌╣▄С</a></li>
+					<li><a href="/koh/pages/kohRegist.jsp">Ф╜╕Её╚Е╦Ё Г≥╩И▄╡Г■╩И²╒Ц│╦Х║▄Ц│█Ц┌┌Ц│├Ц│≈Е─≥</a></li>
 				</ul>
 				<ul type="disc">
-					<li><a href="/koh/pages/parts/menu.jsp">┐│┐j┐┘│[┴Ф√й┌ж█s┌╚┌Ю┌╓┌╣▄С</a></li>
+					<li><a href="/koh/pages/parts/menu.jsp">Ц┐║Ц┐▀Ц┐╔Ц┐╪Г■╩И²╒Ц│╦Х║▄Ц│█Ц┌┌Ц│├Ц│≈Е─≥</a></li>
 				</ul>
 			</div>
 		</html:form>
