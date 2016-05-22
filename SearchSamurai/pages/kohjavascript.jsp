@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=Windows-31J" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="/tags/struts-html" prefix="html" %>
 <%@ taglib uri="/tags/struts-bean" prefix="bean" %>
 <%@ taglib uri="/tags/struts-logic" prefix="logic" %>
@@ -9,70 +9,70 @@
 <link rel="StyleSheet" href="/koh/css/kohRegist.css" type="text/css">
 <html:html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=Windows-31J">
-		<title>•m’ </title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>æ­¦å£«å¸³</title>
 		<link rel="shortcut icon" href="/koh/img/favicon.ico">
 
 		<SCRIPT type="text/javascript">
 <!--
-//‰æ–Ê‚Å“ü—Íƒ`ƒFƒbƒN
+//ç”»é¢ã§å…¥åŠ›ãƒã‚§ãƒƒã‚¯
 function check(){
 	var flag = 0;
-	// •K{‚É‚·‚é€–Ú‚ğİ’è
+	// å¿…é ˆã«ã™ã‚‹é …ç›®ã‚’è¨­å®š
 	if(document.LoginActionForm.userId.value == ""){
 		flag = 1;
-		//‹ó•¶š‚Ìê‡‰æ–Ê•\¦
+		//ç©ºæ–‡å­—ã®å ´åˆç”»é¢è¡¨ç¤º
 		document.getElementById('testId').style.display="block";
 	}else{
-		 //“ü—Í‚³‚ê‚Ä‚¢‚ê‚Î”ñ•\¦
+		 //å…¥åŠ›ã•ã‚Œã¦ã„ã‚Œã°éè¡¨ç¤º
 		 document.getElementById('testId').style.display = "none";
 	}
-	     //‹ó•¶š‚Ìê‡‰æ–Ê•\¦
+	     //ç©ºæ–‡å­—ã®å ´åˆç”»é¢è¡¨ç¤º
 		 if(document.LoginActionForm.userPassword.value == ""){
 			flag = 1;
 			document.getElementById('testPass').style.display="block";
-		//“ü—Í‚³‚ê‚Ä‚¢‚ê‚Î”ñ•\¦
+		//å…¥åŠ›ã•ã‚Œã¦ã„ã‚Œã°éè¡¨ç¤º
 		} else {
 			 document.getElementById('testPass').style.display = "none";
 		}
-	// İ’èI—¹
+	// è¨­å®šçµ‚äº†
 	if(flag == 1){
-		//window.alert('•K{€–Ú‚É–¢“ü—Í‚ª‚ ‚è‚Ü‚µ‚½');
+		//window.alert('å¿…é ˆé …ç›®ã«æœªå…¥åŠ›ãŒã‚ã‚Šã¾ã—ãŸ');
 		countFlag = 1;
 
-		return false; // ‘—M‚ğ’†~
+		return false; // é€ä¿¡ã‚’ä¸­æ­¢
 
 	}else{
-		return true; // ‘—M‚ğÀs
+		return true; // é€ä¿¡ã‚’å®Ÿè¡Œ
 	}
 }
-	//ƒ`ƒFƒbƒNƒ{ƒbƒNƒX‘S‘I‘ğ‚Æ‘S‰ğœ
+	//ãƒã‚§ãƒƒã‚¯ãƒœãƒƒã‚¯ã‚¹å…¨é¸æŠã¨å…¨è§£é™¤
 	function CheckboxChecked(check) {
             document.LoginActionForm.a.checked = check;
             document.LoginActionForm.b.checked = check;
 	}
-	//”wŒiF‚ğ•Ï‚¦‚Ü‚·
+	//èƒŒæ™¯è‰²ã‚’å¤‰ãˆã¾ã™
 	function color(){
-		document.bgColor = "#eeeeff"; // bgcolorF”wŒiF
-		document.fgColor = "#0080ff"; // textF•¶š‚ÌŠî–{F
-		document.linkColor = "#ff0000"; // linkFƒŠƒ“ƒN•¶š‚ÌF
-		document.vlinkColor = "#ff0000"; // vlinkFƒŠƒ“ƒN•¶š‚ÌFiƒAƒNƒZƒXÏ‚İ‚ÌƒŠƒ“ƒNj
-		document.alinkColor = "#ff8000"; // alinkFƒŠƒ“ƒN•¶š‚ÌFiƒNƒŠƒbƒN‚µ‚½uŠÔ‚ÌFj
+		document.bgColor = "#eeeeff"; // bgcolorï¼šèƒŒæ™¯è‰²
+		document.fgColor = "#0080ff"; // textï¼šæ–‡å­—ã®åŸºæœ¬è‰²
+		document.linkColor = "#ff0000"; // linkï¼šãƒªãƒ³ã‚¯æ–‡å­—ã®è‰²
+		document.vlinkColor = "#ff0000"; // vlinkï¼šãƒªãƒ³ã‚¯æ–‡å­—ã®è‰²ï¼ˆã‚¢ã‚¯ã‚»ã‚¹æ¸ˆã¿ã®ãƒªãƒ³ã‚¯ï¼‰
+		document.alinkColor = "#ff8000"; // alinkï¼šãƒªãƒ³ã‚¯æ–‡å­—ã®è‰²ï¼ˆã‚¯ãƒªãƒƒã‚¯ã—ãŸç¬é–“ã®è‰²ï¼‰
 	}
-	//”wŒiF‚ğ–ß‚µ‚Ü‚·
+	//èƒŒæ™¯è‰²ã‚’æˆ»ã—ã¾ã™
 	function color2(){
-		document.bgColor = ""; // bgcolorF”wŒiF
-		document.fgColor = ""; // textF•¶š‚ÌŠî–{F
-		document.linkColor = ""; // linkFƒŠƒ“ƒN•¶š‚ÌF
-		document.vlinkColor = ""; // vlinkFƒŠƒ“ƒN•¶š‚ÌFiƒAƒNƒZƒXÏ‚İ‚ÌƒŠƒ“ƒNj
-		document.alinkColor = ""; // alinkFƒŠƒ“ƒN•¶š‚ÌFiƒNƒŠƒbƒN‚µ‚½uŠÔ‚ÌFj
+		document.bgColor = ""; // bgcolorï¼šèƒŒæ™¯è‰²
+		document.fgColor = ""; // textï¼šæ–‡å­—ã®åŸºæœ¬è‰²
+		document.linkColor = ""; // linkï¼šãƒªãƒ³ã‚¯æ–‡å­—ã®è‰²
+		document.vlinkColor = ""; // vlinkï¼šãƒªãƒ³ã‚¯æ–‡å­—ã®è‰²ï¼ˆã‚¢ã‚¯ã‚»ã‚¹æ¸ˆã¿ã®ãƒªãƒ³ã‚¯ï¼‰
+		document.alinkColor = ""; // alinkï¼šãƒªãƒ³ã‚¯æ–‡å­—ã®è‰²ï¼ˆã‚¯ãƒªãƒƒã‚¯ã—ãŸç¬é–“ã®è‰²ï¼‰
 	}
-	//ƒ{ƒ^ƒ“‚ÌF‚ğ•Ï‚¦‚é
+	//ãƒœã‚¿ãƒ³ã®è‰²ã‚’å¤‰ãˆã‚‹
 	function setColor(obj,col){
 		obj.style.backgroundColor = col;
 	}
-	//©“®‚ÅƒƒbƒZ[ƒW‚ğ•\¦
-	myMsg = "¼“ñ“ñ“ñi@OƒÖOj“ñ½¼“ñ“ñ“ñi@ OƒÖOj“ñ½";
+	//è‡ªå‹•ã§ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’è¡¨ç¤º
+	myMsg = "âŠ‚äºŒäºŒäºŒï¼ˆã€€ï¼¾Ï‰ï¼¾ï¼‰äºŒâŠƒâŠ‚äºŒäºŒäºŒï¼ˆã€€ ï¼¾Ï‰ï¼¾ï¼‰äºŒâŠƒ";
 	myCnt = 0;
 	function myFunc(){
      document.LoginActionForm.myFormMes.value = myMsg.substring( 0 , myCnt ) + "_";
@@ -83,80 +83,80 @@ function check(){
 // -->
 </SCRIPT>
 
-<!-- ‰æ‘œƒXƒƒbƒgˆ—‚ª‘½‚¢‚Ì‚ÅØ‚è•ª‚¯‚½ -->
+<!-- ç”»åƒã‚¹ãƒ­ãƒƒãƒˆå‡¦ç†ãŒå¤šã„ã®ã§åˆ‡ã‚Šåˆ†ã‘ãŸ -->
 <script type="text/javascript"><!--
-				myImageCnt = 3;	// ‰æ‘œ‚Ì”
-				myImage = new Array(	// ‰æ‘œƒtƒ@ƒCƒ‹–¼‚Ìİ’è
-						//Œ´‚³‚ñ‚Ö ‰º‚Ì‰æ‘œƒpƒX‚¾‚¯C³‚µ‚½‚ç“®‚«‚Ü‚µ‚½B
-						//‚Ç‚¤‚â‚çƒtƒ‹ƒpƒX‚Åw’è‚µ‚Ä‚ ‚°‚é•K—v‚ª‚ ‚Á‚½‚æ‚¤‚Å‚·B
-						//‚ ‚ÆƒVƒƒƒbƒtƒ‹‚Éƒe[ƒuƒ‹‚Ì•\¦‚ª•ö‚ê‚È‚¢‚æ‚¤‚ÉA
-						//‰æ‘œƒTƒCƒY‚ğ80px~80px‚É“ˆê‚µ‚Ü‚µ‚½B
+				myImageCnt = 3;	// ç”»åƒã®æ•°
+				myImage = new Array(	// ç”»åƒãƒ•ã‚¡ã‚¤ãƒ«åã®è¨­å®š
+						//åŸã•ã‚“ã¸ ä¸‹ã®ç”»åƒãƒ‘ã‚¹ã ã‘ä¿®æ­£ã—ãŸã‚‰å‹•ãã¾ã—ãŸã€‚
+						//ã©ã†ã‚„ã‚‰ãƒ•ãƒ«ãƒ‘ã‚¹ã§æŒ‡å®šã—ã¦ã‚ã’ã‚‹å¿…è¦ãŒã‚ã£ãŸã‚ˆã†ã§ã™ã€‚
+						//ã‚ã¨ã‚·ãƒ£ãƒƒãƒ•ãƒ«æ™‚ã«ãƒ†ãƒ¼ãƒ–ãƒ«ã®è¡¨ç¤ºãŒå´©ã‚Œãªã„ã‚ˆã†ã«ã€
+						//ç”»åƒã‚µã‚¤ã‚ºã‚’80pxÃ—80pxã«çµ±ä¸€ã—ã¾ã—ãŸã€‚
 				   "http://localhost:8080/koh/img/s_images.jpg",
 				   "http://localhost:8080/koh/img/s_images2.jpg",
 				   "http://localhost:8080/koh/img/s_images3.png"
 				);
-				myBuffer = new Array(myImageCnt);	// ‰æ‘œƒCƒ[ƒW‚ğû”[‚·‚éƒoƒbƒtƒ@
-				for(i=0; i<myImageCnt; i++){	// ‰æ‘œƒCƒ[ƒW‚ğƒƒ‚ƒŠ‚Éæ‚Ş
+				myBuffer = new Array(myImageCnt);	// ç”»åƒã‚¤ãƒ¡ãƒ¼ã‚¸ã‚’åç´ã™ã‚‹ãƒãƒƒãƒ•ã‚¡
+				for(i=0; i<myImageCnt; i++){	// ç”»åƒã‚¤ãƒ¡ãƒ¼ã‚¸ã‚’ãƒ¡ãƒ¢ãƒªã«å–è¾¼ã‚€
 				    myBuffer[i] = new Image();
 				    myBuffer[i].src = myImage[i];
 				}
 
-				myStartFlg = 0;	// ƒXƒ^[ƒgƒ{ƒ^ƒ“ƒtƒ‰ƒO (0:“®‚¢‚Ä‚¢‚È‚¢ 1:“®‚¢‚Ä‚¢‚é)
-				myStopFlg1 = 0;	// ƒ{ƒ^ƒ“1ƒtƒ‰ƒO (-1:“®‚¢‚Ä‚¢‚é 0`n:~‚Ü‚Á‚Ä‚¢‚é)
-				myStopFlg2 = 0;	// ƒ{ƒ^ƒ“2ƒtƒ‰ƒO (-1:“®‚¢‚Ä‚¢‚é 0`n:~‚Ü‚Á‚Ä‚¢‚é)
-				myStopFlg3 = 0;	// ƒ{ƒ^ƒ“3ƒtƒ‰ƒO (-1:“®‚¢‚Ä‚¢‚é 0`n:~‚Ü‚Á‚Ä‚¢‚é)
+				myStartFlg = 0;	// ã‚¹ã‚¿ãƒ¼ãƒˆãƒœã‚¿ãƒ³ãƒ•ãƒ©ã‚° (0:å‹•ã„ã¦ã„ãªã„ 1:å‹•ã„ã¦ã„ã‚‹)
+				myStopFlg1 = 0;	// ãƒœã‚¿ãƒ³1ãƒ•ãƒ©ã‚° (-1:å‹•ã„ã¦ã„ã‚‹ 0ï½n:æ­¢ã¾ã£ã¦ã„ã‚‹)
+				myStopFlg2 = 0;	// ãƒœã‚¿ãƒ³2ãƒ•ãƒ©ã‚° (-1:å‹•ã„ã¦ã„ã‚‹ 0ï½n:æ­¢ã¾ã£ã¦ã„ã‚‹)
+				myStopFlg3 = 0;	// ãƒœã‚¿ãƒ³3ãƒ•ãƒ©ã‚° (-1:å‹•ã„ã¦ã„ã‚‹ 0ï½n:æ­¢ã¾ã£ã¦ã„ã‚‹)
 
-				function myStart(){	// ƒ{ƒ^ƒ“‚ª‰Ÿ‚³‚ê‚½
-				    if (myStartFlg == 0){	// Šù‚É‰Ÿ‚µ‚Ä‚¢‚È‚¯‚ê‚ÎA
-				        myStartFlg = 1;	// ƒXƒ^[ƒg!
-				        myStopFlg1 = -1;	// ƒ{ƒ^ƒ“1‰ñ“]!
-				        myStopFlg2 = -1;	// ƒ{ƒ^ƒ“2‰ñ“]!
-				        myStopFlg3 = -1;	// ƒ{ƒ^ƒ“3‰ñ“]!
+				function myStart(){	// ãƒœã‚¿ãƒ³ãŒæŠ¼ã•ã‚ŒãŸ
+				    if (myStartFlg == 0){	// æ—¢ã«æŠ¼ã—ã¦ã„ãªã‘ã‚Œã°ã€
+				        myStartFlg = 1;	// ã‚¹ã‚¿ãƒ¼ãƒˆ!
+				        myStopFlg1 = -1;	// ãƒœã‚¿ãƒ³1å›è»¢!
+				        myStopFlg2 = -1;	// ãƒœã‚¿ãƒ³2å›è»¢!
+				        myStopFlg3 = -1;	// ãƒœã‚¿ãƒ³3å›è»¢!
 				        myLoop();
 				    }
 				}
 
-				function myLoop(){	// ‰ñ“]‚³‚¹‚éƒ‹[ƒ`ƒ“
-				    if (myStopFlg1==-1||myStopFlg2==-1||myStopFlg3==-1){	// ‚Ü‚¾‚Ç‚±‚©‰ñ“]‚µ‚Ä‚¢‚é‚©H
-				        if (myStopFlg1==-1){	// ƒ{ƒ^ƒ“1‚Í‰ñ“]‚µ‚Ä‚¢‚é‚©H
-				            myRnd = Math.floor(Math.random()*myImageCnt);	// —”‚ğ‹‚ß‚é
-				            document.LoginActionForm.myFormImg1.src = myBuffer[myRnd].src;	// —””Ô–Ú‚Ì‰æ‘œ‚ğ•\¦‚·‚é
+				function myLoop(){	// å›è»¢ã•ã›ã‚‹ãƒ«ãƒ¼ãƒãƒ³
+				    if (myStopFlg1==-1||myStopFlg2==-1||myStopFlg3==-1){	// ã¾ã ã©ã“ã‹å›è»¢ã—ã¦ã„ã‚‹ã‹ï¼Ÿ
+				        if (myStopFlg1==-1){	// ãƒœã‚¿ãƒ³1ã¯å›è»¢ã—ã¦ã„ã‚‹ã‹ï¼Ÿ
+				            myRnd = Math.floor(Math.random()*myImageCnt);	// ä¹±æ•°ã‚’æ±‚ã‚ã‚‹
+				            document.LoginActionForm.myFormImg1.src = myBuffer[myRnd].src;	// ä¹±æ•°ç•ªç›®ã®ç”»åƒã‚’è¡¨ç¤ºã™ã‚‹
 				        }
-				        if (myStopFlg2==-1){	// ƒ{ƒ^ƒ“2‚Í‰ñ“]‚µ‚Ä‚¢‚é‚©H
-				            myRnd = Math.floor(Math.random()*myImageCnt);	// —”‚ğ‹‚ß‚é
-				            document.LoginActionForm.myFormImg2.src = myBuffer[myRnd].src;	// —””Ô–Ú‚Ì‰æ‘œ‚ğ•\¦‚·‚é
+				        if (myStopFlg2==-1){	// ãƒœã‚¿ãƒ³2ã¯å›è»¢ã—ã¦ã„ã‚‹ã‹ï¼Ÿ
+				            myRnd = Math.floor(Math.random()*myImageCnt);	// ä¹±æ•°ã‚’æ±‚ã‚ã‚‹
+				            document.LoginActionForm.myFormImg2.src = myBuffer[myRnd].src;	// ä¹±æ•°ç•ªç›®ã®ç”»åƒã‚’è¡¨ç¤ºã™ã‚‹
 				        }
-				        if (myStopFlg3==-1){	// ƒ{ƒ^ƒ“3‚Í‰ñ“]‚µ‚Ä‚¢‚é‚©H
-				            myRnd = Math.floor(Math.random()*myImageCnt);	// —”‚ğ‹‚ß‚é
-				            document.LoginActionForm.myFormImg3.src = myBuffer[myRnd].src;	// —””Ô–Ú‚Ì‰æ‘œ‚ğ•\¦‚·‚é
+				        if (myStopFlg3==-1){	// ãƒœã‚¿ãƒ³3ã¯å›è»¢ã—ã¦ã„ã‚‹ã‹ï¼Ÿ
+				            myRnd = Math.floor(Math.random()*myImageCnt);	// ä¹±æ•°ã‚’æ±‚ã‚ã‚‹
+				            document.LoginActionForm.myFormImg3.src = myBuffer[myRnd].src;	// ä¹±æ•°ç•ªç›®ã®ç”»åƒã‚’è¡¨ç¤ºã™ã‚‹
 				        }
-				        setTimeout( "myLoop()" , 20 );	// ‚®‚é‚®‚é‰ñ“]‚³‚¹‚é!
+				        setTimeout( "myLoop()" , 20 );	// ãã‚‹ãã‚‹å›è»¢ã•ã›ã‚‹!
 				    }else{
-				        myStartFlg = 0;	// ‘S•”~‚Ü‚Á‚½
+				        myStartFlg = 0;	// å…¨éƒ¨æ­¢ã¾ã£ãŸ
 				    }
 				}
 
-				function myStop1(){	// ƒ{ƒ^ƒ“1‚ª‰Ÿ‚³‚ê‚½
-				    if (myStopFlg1 == -1){	// ƒ{ƒ^ƒ“‚P‚Í‰ñ“]‚µ‚Ä‚¢‚é‚©H
-				        myRnd = Math.floor(Math.random()*myImageCnt);	// —”‚ğ‹‚ß‚é
-			            document.LoginActionForm.myFormImg1.src = myBuffer[myRnd].src;	// —””Ô–Ú‚Ì‰æ‘œ‚ğ•\¦‚·‚é
-				        myStopFlg1 = myRnd;	// ~‚Ü‚Á‚½‰æ‘œ‚Ì”Ô†‚ğ‘Ş”ğ
+				function myStop1(){	// ãƒœã‚¿ãƒ³1ãŒæŠ¼ã•ã‚ŒãŸ
+				    if (myStopFlg1 == -1){	// ãƒœã‚¿ãƒ³ï¼‘ã¯å›è»¢ã—ã¦ã„ã‚‹ã‹ï¼Ÿ
+				        myRnd = Math.floor(Math.random()*myImageCnt);	// ä¹±æ•°ã‚’æ±‚ã‚ã‚‹
+			            document.LoginActionForm.myFormImg1.src = myBuffer[myRnd].src;	// ä¹±æ•°ç•ªç›®ã®ç”»åƒã‚’è¡¨ç¤ºã™ã‚‹
+				        myStopFlg1 = myRnd;	// æ­¢ã¾ã£ãŸç”»åƒã®ç•ªå·ã‚’é€€é¿
 				    }
 				}
 
-				function myStop2(){	// ƒ{ƒ^ƒ“2‚ª‰Ÿ‚³‚ê‚½
-				    if (myStopFlg2 == -1){	// ƒ{ƒ^ƒ“2‚Í‰ñ“]‚µ‚Ä‚¢‚é‚©H
-				        myRnd = Math.floor(Math.random()*myImageCnt);	// —”‚ğ‹‚ß‚é
-			            document.LoginActionForm.myFormImg2.src = myBuffer[myRnd].src;	// —””Ô–Ú‚Ì‰æ‘œ‚ğ•\¦‚·‚é
-				        myStopFlg2 = myRnd;	// ~‚Ü‚Á‚½‰æ‘œ‚Ì”Ô†‚ğ‘Ş”ğ
+				function myStop2(){	// ãƒœã‚¿ãƒ³2ãŒæŠ¼ã•ã‚ŒãŸ
+				    if (myStopFlg2 == -1){	// ãƒœã‚¿ãƒ³2ã¯å›è»¢ã—ã¦ã„ã‚‹ã‹ï¼Ÿ
+				        myRnd = Math.floor(Math.random()*myImageCnt);	// ä¹±æ•°ã‚’æ±‚ã‚ã‚‹
+			            document.LoginActionForm.myFormImg2.src = myBuffer[myRnd].src;	// ä¹±æ•°ç•ªç›®ã®ç”»åƒã‚’è¡¨ç¤ºã™ã‚‹
+				        myStopFlg2 = myRnd;	// æ­¢ã¾ã£ãŸç”»åƒã®ç•ªå·ã‚’é€€é¿
 				    }
 				}
 
-				function myStop3(){	// ƒ{ƒ^ƒ“3‚ª‰Ÿ‚³‚ê‚½
-				    if (myStopFlg3 == -1){	// ƒ{ƒ^ƒ“3‚Í‰ñ“]‚µ‚Ä‚¢‚é‚©H
-				        myRnd = Math.floor(Math.random()*myImageCnt);	// —”‚ğ‹‚ß‚é
-			            document.LoginActionForm.myFormImg3.src = myBuffer[myRnd].src;	// —””Ô–Ú‚Ì‰æ‘œ‚ğ•\¦‚·‚é
-				        myStopFlg3 = myRnd;	// ~‚Ü‚Á‚½‰æ‘œ‚Ì”Ô†‚ğ‘Ş”ğ
+				function myStop3(){	// ãƒœã‚¿ãƒ³3ãŒæŠ¼ã•ã‚ŒãŸ
+				    if (myStopFlg3 == -1){	// ãƒœã‚¿ãƒ³3ã¯å›è»¢ã—ã¦ã„ã‚‹ã‹ï¼Ÿ
+				        myRnd = Math.floor(Math.random()*myImageCnt);	// ä¹±æ•°ã‚’æ±‚ã‚ã‚‹
+			            document.LoginActionForm.myFormImg3.src = myBuffer[myRnd].src;	// ä¹±æ•°ç•ªç›®ã®ç”»åƒã‚’è¡¨ç¤ºã™ã‚‹
+				        myStopFlg3 = myRnd;	// æ­¢ã¾ã£ãŸç”»åƒã®ç•ªå·ã‚’é€€é¿
 				    }
 				}
 // --></script>
@@ -165,25 +165,25 @@ function check(){
 	<body>
 	<html:form action="/KohUserAllAction"  method="POST" onsubmit="return check()">
 					<div style="text-align:center">
-						<h1>•m’ </h1>
-						<h2>javascript—ûK—p‚¾‚¨      passXV‚Í‚Å‚«‚Ü‚·</h2><br>
+						<h1>æ­¦å£«å¸³</h1>
+						<h2>javascriptç·´ç¿’ç”¨ã ãŠ      passæ›´æ–°ã¯ã§ãã¾ã™</h2><br>
 					</div>
 			<div class="message_area" align="center">
-					<!-- ƒoƒŠƒf[ƒVƒ‡ƒ“ƒGƒ‰[ -->
+					<!-- ãƒãƒªãƒ‡ãƒ¼ã‚·ãƒ§ãƒ³ã‚¨ãƒ©ãƒ¼ -->
 					<html:errors />
-						<!-- “o˜^‚Æ‚©íœ‚Æ‚©‚Å‚«‚½‚ç‚Æ‚Å‚«‚È‚©‚Á‚½‚ç -->
+						<!-- ç™»éŒ²ã¨ã‹å‰Šé™¤ã¨ã‹ã§ããŸã‚‰ã¨ã§ããªã‹ã£ãŸã‚‰ -->
 						<logic:notEmpty name="<%=SystemConst.REQUEST_KEY.MESSAGE_INFO%>" scope="request">
 							<bean:write name="<%=SystemConst.REQUEST_KEY.MESSAGE_INFO%>" scope="request" /><br>
 						</logic:notEmpty>
 			</div>
 
-	<!-- “ü—Í’l‚ª‚È‚¢ê‡‚ÌƒGƒ‰[•\¦ javascript-->
+	<!-- å…¥åŠ›æ™‚å€¤ãŒãªã„å ´åˆã®ã‚¨ãƒ©ãƒ¼è¡¨ç¤º javascript-->
 					<div style="text-align:center">
-						<p id="testId" style="display: none; color: red;"> yID‚ğ“ü—Í‚µ‚Ä‰º‚³‚¢(javascript—ûK—p)z</p>
-						<p id="testPass" style="display: none; color: red;"> ypass‚ğ“ü—Í‚µ‚Ä‰º‚³‚¢(javascript—ûK—p)z</p>
+						<p id="testId" style="display: none; color: red;"> ã€IDã‚’å…¥åŠ›ã—ã¦ä¸‹ã•ã„(javascriptç·´ç¿’ç”¨)ã€‘</p>
+						<p id="testPass" style="display: none; color: red;"> ã€passã‚’å…¥åŠ›ã—ã¦ä¸‹ã•ã„(javascriptç·´ç¿’ç”¨)ã€‘</p>
 					</div>
-	<!-- UserŒŸõ -->
-	<table border="1" align="center"><caption>XV</caption>
+	<!-- Useræ¤œç´¢ -->
+	<table border="1" align="center"><caption>æ›´æ–°</caption>
 
 			<tr><td> ID </td><td> <html:text  property="userId" /> <input type="checkbox" name="a" size=2></td></tr>
 
@@ -191,30 +191,30 @@ function check(){
 
 	</table>
 		<div style="text-align:center">
-			<!-- Checkbox‘I‘ğƒeƒXƒg -->
-			<INPUT  type="button" onClick="CheckboxChecked(true);" value="ˆêŠ‡‘I‘ğ">
-			<INPUT  type="button" onClick="CheckboxChecked(false);" value="‘S‚Ä–¢‘I‘ğ">
+			<!-- Checkboxé¸æŠãƒ†ã‚¹ãƒˆ -->
+			<INPUT  type="button" onClick="CheckboxChecked(true);" value="ä¸€æ‹¬é¸æŠ">
+			<INPUT  type="button" onClick="CheckboxChecked(false);" value="å…¨ã¦æœªé¸æŠ">
 				<br>
-		 	<input type="submit" value="‘—M">
+		 	<input type="submit" value="é€ä¿¡">
 		 		<br>
-		 	<!-- ”wŒiF•ÏX -->
-		 	<INPUT  type="button" onClick="color();" value="F•Ï‚¦‚Ü‚·">
-		 	<INPUT  type="button" onClick="color2();" value="F–ß‚µ‚Ü‚·">
+		 	<!-- èƒŒæ™¯è‰²å¤‰æ›´ -->
+		 	<INPUT  type="button" onClick="color();" value="è‰²å¤‰ãˆã¾ã™">
+		 	<INPUT  type="button" onClick="color2();" value="è‰²æˆ»ã—ã¾ã™">
 		 		<br>
-		 	<!-- ƒ{ƒ^ƒ“‚ÌF‚ğ•ÏX -->
-		 	<input type="button" value="ƒ{ƒ^ƒ“F•Ï‚¦‚Ü‚·" name="butt"style="background-color:#FBEFFB"
+		 	<!-- ãƒœã‚¿ãƒ³ã®è‰²ã‚’å¤‰æ›´ -->
+		 	<input type="button" value="ãƒœã‚¿ãƒ³è‰²å¤‰ãˆã¾ã™" name="butt"style="background-color:#FBEFFB"
 			onMouseover="setColor(this,'#04B404')" onMouseout="setColor(this,'#FBEFFB')">
-			<input type="button" value="ƒ{ƒ^ƒ“F•Ï‚¦‚Ü‚·yo" name="butt"style="background-color:#DF013A"
+			<input type="button" value="ãƒœã‚¿ãƒ³è‰²å¤‰ãˆã¾ã™yo" name="butt"style="background-color:#DF013A"
 			onMouseover="setColor(this,'#81F7F3')" onMouseout="setColor(this,'#DF013A')">
 				<br>
-			<!-- ©“®‚ÅƒƒbƒZ[ƒW‚ğo‚· -->
+			<!-- è‡ªå‹•ã§ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å‡ºã™ -->
 			<input type="text" size="30" name="myFormMes">
 			<script type="text/javascript"><!--
 			setInterval("myFunc()",200);
 			// -->
 			</script>
 
-			<!-- ‰æ‘œƒXƒƒbƒg -->
+			<!-- ç”»åƒã‚¹ãƒ­ãƒƒãƒˆ -->
 			<table border="1" align="center" width="20%" height="20%" >
 					<tr>
 					<td align="center"  width="20%" height="20%" ><img src="/koh/img/s_images.jpg" name="myFormImg1"></td>

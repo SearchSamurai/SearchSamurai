@@ -1,16 +1,16 @@
-<%@ page contentType="text/html; charset=Windows-31J" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="/tags/struts-html" prefix="html" %>
 <%@ taglib uri="/tags/struts-bean" prefix="bean" %>
 <%@ page import="jp.co.koh.common.constants.JspConst" %>
 
 <html:html>
   <head>
-    <title>•Žm’ :ƒVƒXƒeƒ€ƒGƒ‰[‰æ–Ê</title>
+    <title>æ­¦å£«å¸³:ã‚·ã‚¹ãƒ†ãƒ ã‚¨ãƒ©ãƒ¼ç”»é¢</title>
     <meta http-equiv="Content-Type"
-            content="text/html; charset=Windows-31J">
+            content="text/html; charset=UTF-8">
   </head>
 <body>
 <br>
-<h2><html:link href="<%=JspConst.JSP_FOWARD.LOGIN%>">–ß‚é</html:link></h2>
+<h2><html:link href="<%=JspConst.JSP_FOWARD.LOGIN%>">æˆ»ã‚‹</html:link></h2>
 </body>
 </html:html>

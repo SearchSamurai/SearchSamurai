@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=Windows-31J" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="/tags/struts-html" prefix="html" %>
 <%@ taglib uri="/tags/struts-bean" prefix="bean" %>
 <%@ taglib uri="/tags/struts-logic" prefix="logic" %>
@@ -7,53 +7,53 @@
 <link rel="StyleSheet" href="/koh/css/kohRegist.css" type="text/css">
 <html:html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=Windows-31J">
-		<title>•Žm’ “o˜^</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>æ­¦å£«å¸³ç™»éŒ²</title>
 		<link rel="shortcut icon" href="/koh/img/favicon.ico">
 	</head>
 	<body>
 		<html:form action="/KohRegistCheckAction" method="POST">
 			<div style="text-align:center">
-			<h1>•Žm’ </h1>
-			<h2>•Žm“o˜^‚Å‚²‚´‚é</h2><br>
+			<h1>æ­¦å£«å¸³</h1>
+			<h2>æ­¦å£«ç™»éŒ²ã§ã”ã–ã‚‹</h2><br>
 			</div>
 
-				<!-- css‚ðŽg—p‚µ‚Ä‚Ý‚é -->
+				<!-- cssã‚’ä½¿ç”¨ã—ã¦ã¿ã‚‹ -->
 				<p>
 				<div class="message_area" align="center">
-					<!-- ƒoƒŠƒf[ƒVƒ‡ƒ“ƒGƒ‰[ -->
+					<!-- ãƒãƒªãƒ‡ãƒ¼ã‚·ãƒ§ãƒ³ã‚¨ãƒ©ãƒ¼ -->
 					<html:errors />
-						<!-- “o˜^‚Å‚«‚½‚ç‚ÆIDd•¡‚Ìê‡ -->
+						<!-- ç™»éŒ²ã§ããŸã‚‰ã¨IDé‡è¤‡ã®å ´åˆ -->
 						<logic:notEmpty name="<%=SystemConst.REQUEST_KEY.MESSAGE_INFO%>" scope="request">
 							<bean:write name="<%=SystemConst.REQUEST_KEY.MESSAGE_INFO%>" scope="request" /><br>
 						</logic:notEmpty>
 				</div>
 	<br>
-	<!-- “o˜^‰æ–Ê -->
-		<table border="1"  align="center"><caption>•Žm‚ð“o˜^‚µŒó</caption>
+	<!-- ç™»éŒ²ç”»é¢ -->
+		<table border="1"  align="center"><caption>æ­¦å£«ã‚’ç™»éŒ²ã—å€™</caption>
 			<tr><td> ID </td><td> <html:text property="bushiId"/> </td></tr>
-			<tr><td> –¼‘O </td><td> <html:text property="name"/> </td></tr>
-			<tr><td> ”N—î </td><td> <html:text property="age"/> </td></tr>
-			<tr><td> Š‘®‘à </td><td> <html:text property="bushiGroup"/> </td></tr>
-			<tr><td> og’n  </td><td> <html:text property="birthPlace"/> </td></tr>
-			<tr><td> ’P‰¿ </td><td> <html:text property="unitPrice"/> </td></tr>
-			<tr><td> “¾ˆÓ•Ší </td><td><select name="weapon" style=width:173px>
-					<option value="“">“</option>
-					<option value="‹|">‹|</option>
-					<option value="‘„">‘„</option>
-					<option value="e">e</option>
+			<tr><td> åå‰ </td><td> <html:text property="name"/> </td></tr>
+			<tr><td> å¹´é½¢ </td><td> <html:text property="age"/> </td></tr>
+			<tr><td> æ‰€å±žéšŠ </td><td> <html:text property="bushiGroup"/> </td></tr>
+			<tr><td> å‡ºèº«åœ°  </td><td> <html:text property="birthPlace"/> </td></tr>
+			<tr><td> å˜ä¾¡ </td><td> <html:text property="unitPrice"/> </td></tr>
+			<tr><td> å¾—æ„æ­¦å™¨ </td><td><select name="weapon" style=width:173px>
+					<option value="åˆ€">åˆ€</option>
+					<option value="å¼“">å¼“</option>
+					<option value="æ§">æ§</option>
+					<option value="éŠƒ">éŠƒ</option>
 				</select> </td></tr>
 
 		</table>
 	<br>
 		<div style="text-align:center">
-			<html:submit property="submit" value=" “o˜^ " />
+			<html:submit property="submit" value=" ç™»éŒ² " />
 	<br>
-		<!-- ƒŠƒ“ƒN‚ð‚Â‚¯‚Ä‚Ý‚Ü‚µ‚½ -->
+		<!-- ãƒªãƒ³ã‚¯ã‚’ã¤ã‘ã¦ã¿ã¾ã—ãŸ -->
 			<ul  style="list-style-type:none;">
-				<li><a href="/koh/pages/kohSearch.jsp">•Žm’  ŒŸõ‰æ–Ê‚Ös‚«‚à‚¤‚µŒó</a><br></li>
+				<li><a href="/koh/pages/kohSearch.jsp">æ­¦å£«å¸³ æ¤œç´¢ç”»é¢ã¸è¡Œãã‚‚ã†ã—å€™</a><br></li>
 
-				<li><a href="/koh/pages/parts/menu.jsp">ƒƒjƒ…[‰æ–Ê‚Ös‚«‚à‚¤‚µŒó</a></li>
+				<li><a href="/koh/pages/parts/menu.jsp">ãƒ¡ãƒ‹ãƒ¥ãƒ¼ç”»é¢ã¸è¡Œãã‚‚ã†ã—å€™</a></li>
 			</ul>
 		</div>
 		</html:form>

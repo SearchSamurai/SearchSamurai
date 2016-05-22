@@ -17,7 +17,7 @@
 <html:html>
 
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=Windows-31J">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>武士帳</title>
 		<link rel="shortcut icon" href="/koh/img/favicon.ico">
 	</head>

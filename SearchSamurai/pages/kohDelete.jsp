@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=Windows-31J" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="/tags/struts-html" prefix="html" %>
 <%@ taglib uri="/tags/struts-bean" prefix="bean" %>
 <%@ taglib uri="/tags/struts-logic" prefix="logic" %>
@@ -7,44 +7,44 @@
 <link rel="StyleSheet" href="/koh/css/kohRegist.css" type="text/css">
 <html:html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=Windows-31J">
-		<title>•Žm’ “o˜^</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>æ­¦å£«å¸³ç™»éŒ²</title>
 		<link rel="shortcut icon" href="/koh/img/favicon.ico">
 	</head>
 	<body>
 	<html:form action="/KohDeleteCheckAction" method="POST">
-	<h1>•Žm’ </h1>
-	<h2>•Žmíœ‚Å‚²‚´‚é</h2><br>
+	<h1>æ­¦å£«å¸³</h1>
+	<h2>æ­¦å£«å‰Šé™¤ã§ã”ã–ã‚‹</h2><br>
 
-	<!-- css‚ðŽg—p‚µ‚Ä‚Ý‚é -->
+	<!-- cssã‚’ä½¿ç”¨ã—ã¦ã¿ã‚‹ -->
 	<p>
 	<div class="message_area">
-					<!-- ƒoƒŠƒf[ƒVƒ‡ƒ“ƒGƒ‰[ -->
+					<!-- ãƒãƒªãƒ‡ãƒ¼ã‚·ãƒ§ãƒ³ã‚¨ãƒ©ãƒ¼ -->
 					<html:errors />
-						<!-- IDd•¡‚Ìê‡ -->
+						<!-- IDé‡è¤‡ã®å ´åˆ -->
 						<logic:notEmpty name="<%=SystemConst.REQUEST_KEY.MESSAGE_INFO%>" scope="request">
 							<bean:write name="<%=SystemConst.REQUEST_KEY.MESSAGE_INFO%>" scope="request" /><br>
 						</logic:notEmpty>
 	</div>
 	</p>
 	<br>
-	<!-- íœ‰æ–Ê -->
-	<table border="1"><caption>íœ‚µ‚½‚¢•Žm‚ÌID‚ð‘I‚ÑŒó</caption>
+	<!-- å‰Šé™¤ç”»é¢ -->
+	<table border="1"><caption>å‰Šé™¤ã—ãŸã„æ­¦å£«ã®IDã‚’é¸ã³å€™</caption>
 	<tr><td> ID </td><td> <html:text property="bushiId"/> </td></tr>
 
 	</table>
 	<br>
-		<html:submit property="submit" value=" íœ " />
+		<html:submit property="submit" value=" å‰Šé™¤ " />
 	<br>
-	<!-- ƒŠƒ“ƒN‚ð‚Â‚¯‚Ä‚Ý‚Ü‚µ‚½ -->
+	<!-- ãƒªãƒ³ã‚¯ã‚’ã¤ã‘ã¦ã¿ã¾ã—ãŸ -->
 		<ul type="disc">
-	<li><a href="/koh/pages/kohSearch.jsp">•Žm’  ŒŸõ‰æ–Ê‚Ös‚«‚à‚¤‚µŒó</a></li>
+	<li><a href="/koh/pages/kohSearch.jsp">æ­¦å£«å¸³ æ¤œç´¢ç”»é¢ã¸è¡Œãã‚‚ã†ã—å€™</a></li>
 		</ul>
 		<ul type="disc">
-	<li><a href="/koh/pages/parts/menu.jsp">“o˜^‰æ–Ê‚Ös‚«‚à‚¤‚µŒó</a></li>
+	<li><a href="/koh/pages/parts/menu.jsp">ç™»éŒ²ç”»é¢ã¸è¡Œãã‚‚ã†ã—å€™</a></li>
 		</ul>
 		<ul type="disc">
-	<li><a href="/koh/pages/parts/menu.jsp">ƒƒjƒ…[‰æ–Ê‚Ös‚«‚à‚¤‚µŒó</a></li>
+	<li><a href="/koh/pages/parts/menu.jsp">ãƒ¡ãƒ‹ãƒ¥ãƒ¼ç”»é¢ã¸è¡Œãã‚‚ã†ã—å€™</a></li>
 		</ul>
 	</html:form>
 	</body>

@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=Windows-31J" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="/tags/struts-html" prefix="html" %>
 <%@ taglib uri="/tags/struts-bean" prefix="bean" %>
 <%@ page import="jp.co.koh.common.constants.SystemConst" %>
@@ -7,25 +7,25 @@
 
 <html:html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=Windows-31J">
-<title>ïêémí†</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Ê≠¶Â£´Â∏≥</title>
 <link rel="shortcut icon" href="/koh/img/favicon.ico">
 </head>
 <body>
 
-	<!-- ÉÅÉCÉìÉwÉbÉ_Å[ïîï™ -->
+	<!-- „É°„Ç§„É≥„Éò„ÉÉ„ÉÄ„ÉºÈÉ®ÂàÜ -->
 
 				<jsp:include page="<%=JspConst.JSP_COMMON.HEADER%>" />
 
-			<!-- ÉÅÉCÉìÉwÉbÉ_Å[ïîï™Ç±Ç±Ç‹Ç≈ -->
+			<!-- „É°„Ç§„É≥„Éò„ÉÉ„ÉÄ„ÉºÈÉ®ÂàÜ„Åì„Åì„Åæ„Åß -->
 
-	<!-- ÉTÉCÉhÉGÉäÉAïîï™ -->
+	<!-- „Çµ„Ç§„Éâ„Ç®„É™„Ç¢ÈÉ®ÂàÜ -->
 
 				<jsp:include page="<%=JspConst.JSP_COMMON.LOGIN%>" />
 
-	<!-- ÉTÉCÉhÉGÉäÉAïîï™ èIÇÌÇË -->
+	<!-- „Çµ„Ç§„Éâ„Ç®„É™„Ç¢ÈÉ®ÂàÜ ÁµÇ„Çè„Çä -->
 
-		<!-- ÉtÉbÉ^Å[ïîï™ -->
+		<!-- „Éï„ÉÉ„Çø„ÉºÈÉ®ÂàÜ -->
 
 				<jsp:include page="<%=JspConst.JSP_COMMON.FOOTER%>" />
 

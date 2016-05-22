@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=Windows-31J" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <link rel="StyleSheet" href="/koh/css/parts/footer.css" type="text/css">
 
 <div id="footer">

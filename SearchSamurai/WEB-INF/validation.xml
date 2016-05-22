@@ -1,18 +1,18 @@
-<?xml version="1.0" encoding="Windows-31J" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE form-validation PUBLIC
      "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.3.0//EN"
      "http://jakarta.apache.org/commons/dtds/validator_1_3_0.dtd">
 
 <form-validation>
 	<formset>
-	<!-- ìoò^ÇÃvalidation  -->
+	<!-- ÁôªÈå≤„ÅÆvalidation  -->
 	<form name="KohRegistActionForm">
-			<!-- ïêémIDÇÃvalidation  -->
+			<!-- Ê≠¶Â£´ID„ÅÆvalidation  -->
 			<field property="bushiId" depends="required, maxlength, mask">
 				<msg name="required" key="errors.required" />
 				<msg name="maxlength" key="errors.keta" />
 				<msg name="mask" key="errors.hansuu" />
-				<arg position="0" key="ïêémID" resource="false" />
+				<arg position="0" key="Ê≠¶Â£´ID" resource="false" />
 				<arg position="1" key="${var:maxlength}" resource="false" />
 				<var>
 					<var-name>maxlength</var-name>
@@ -23,14 +23,14 @@
 					<var-value>^[0-9]+$</var-value>
 				</var>
 			</field>
-			<!-- ñºëOÇÃvalidation  -->
+			<!-- ÂêçÂâç„ÅÆvalidation  -->
 			<field property="name" depends="required, maxlength, mask">
 				<msg name="required" key="errors.required" />
 				<msg name="maxlength" key="errors.keta" />
 				<msg name="mask" key="errors.kanjihira" />
-				<arg position="0" key="ñºëO" resource="false" />
+				<arg position="0" key="ÂêçÂâç" resource="false" />
 				<arg position="1" key="${var:maxlength}" resource="false" />
-				<arg position="4" key="äøéöÇ©Ç–ÇÁÇ™Ç»" resource="false" />
+				<arg position="4" key="Êº¢Â≠ó„Åã„Å≤„Çâ„Åå„Å™" resource="false" />
 				<var>
 					<var-name>maxlength</var-name>
 					<var-value>10</var-value>
@@ -40,15 +40,15 @@
 					<var-value>^[^0-9a-zA-Z]+$</var-value>
 				</var>
 			</field>
-			<!-- îNóÓÇÃvalidation  -->
+			<!-- Âπ¥ÈΩ¢„ÅÆvalidation  -->
 			<field property="age" depends="required, maxlength, mask, intRange">
 				<msg name="required" key="errors.required" />
 				<msg name="maxlength" key="errors.intrange" />
 				<msg name="mask" key="errors.hansuu" />
 				<msg name="intRange" key="errors.intrange" />
-				<arg position="0" key="îNóÓ" resource="false" />
-				<arg position="2" key="${var:min}çŒ(å≥ïûÇ©ÇÁ)" resource="false" />
-				<arg position="3" key="${var:max}çŒ(íËîNÇ‹Ç≈)" resource="false" />
+				<arg position="0" key="Âπ¥ÈΩ¢" resource="false" />
+				<arg position="2" key="${var:min}Ê≠≥(ÂÖÉÊúç„Åã„Çâ)" resource="false" />
+				<arg position="3" key="${var:max}Ê≠≥(ÂÆöÂπ¥„Åæ„Åß)" resource="false" />
 				<var>
 					<var-name>maxlength</var-name>
 					<var-value>2</var-value>
@@ -66,12 +66,12 @@
 					<var-value>50</var-value>
 				</var>
 			</field>
-			<!-- èäëÆë‡ÇÃvalidation  -->
+			<!-- ÊâÄÂ±ûÈöä„ÅÆvalidation  -->
 			<field property="bushiGroup" depends="mask, maxlength">
 				<msg name="mask" key="errors.kanjihira" />
 				<msg name="maxlength" key="errors.keta" />
-				<arg position="0" key="èäëÆë‡" resource="false" />
-				<arg position="4" key="äøéöÇ©Ç–ÇÁÇ™Ç»" resource="false" />
+				<arg position="0" key="ÊâÄÂ±ûÈöä" resource="false" />
+				<arg position="4" key="Êº¢Â≠ó„Åã„Å≤„Çâ„Åå„Å™" resource="false" />
 				<arg position="1" key="${var:maxlength}" resource="false" />
 				<var>
 					<var-name>mask</var-name>
@@ -82,13 +82,13 @@
 					<var-value>10</var-value>
 				</var>
 			</field>
-			<!-- èoêgínÇÃvalidation  -->
+			<!-- Âá∫Ë∫´Âú∞„ÅÆvalidation  -->
 			<field property="birthPlace" depends="maxlength, mask">
 				<msg name="maxlength" key="errors.keta" />
 				<msg name="mask" key="errors.kanjihira" />
-				<arg position="0" key="èoêgín" resource="false" />
+				<arg position="0" key="Âá∫Ë∫´Âú∞" resource="false" />
 				<arg position="1" key="${var:maxlength}" resource="false" />
-				<arg position="4" key="äøéöÇ©Ç–ÇÁÇ™Ç»" resource="false" />
+				<arg position="4" key="Êº¢Â≠ó„Åã„Å≤„Çâ„Åå„Å™" resource="false" />
 				<var>
 					<var-name>maxlength</var-name>
 					<var-value>10</var-value>
@@ -98,12 +98,12 @@
 					<var-value>^[^0-9a-zA-Z]+$</var-value>
 				</var>
 			</field>
-			<!-- íPâøÇÃvalidation  -->
+			<!-- Âçò‰æ°„ÅÆvalidation  -->
 			<field property="unitPrice" depends="required, maxlength, mask">
 				<msg name="required" key="errors.required" />
 				<msg name="maxlength" key="errors.keta" />
 				<msg name="mask" key="errors.hansuu" />
-				<arg position="0" key="íPâø" resource="false" />
+				<arg position="0" key="Âçò‰æ°" resource="false" />
 				<arg position="1" key="${var:maxlength}" resource="false" />
 				<var>
 					<var-name>maxlength</var-name>
@@ -114,30 +114,30 @@
 					<var-value>^[0-9]+$</var-value>
 				</var>
 			</field>
-			<!-- ïêäÌÇÃvalidation  -->
+			<!-- Ê≠¶Âô®„ÅÆvalidation  -->
 			<field property="weapon" depends="maxlength, mask">
 				<msg name="maxlength" key="errors.weaponcheck" />
 				<msg name="mask" key="errors.weaponcheck" />
-				<arg position="0" key="ïêäÌ" resource="false" />
+				<arg position="0" key="Ê≠¶Âô®" resource="false" />
 				<arg position="1" key="${var:maxlength}" resource="false" />
-				<arg position="5" key="ìÅÅAëÑÅAã|ÅAèe" resource="false" />
+				<arg position="5" key="ÂàÄ„ÄÅÊßç„ÄÅÂºì„ÄÅÈäÉ" resource="false" />
 				<var>
 					<var-name>maxlength</var-name>
 					<var-value>1</var-value>
 				</var>
 				<var>
 					<var-name>mask</var-name>
-					<var-value>^[ìÅã|èeëÑ]+$</var-value>
+					<var-value>^[ÂàÄÂºìÈäÉÊßç]+$</var-value>
 				</var>
 			</field>
 		</form>
 
-	<!-- ÉÜÅ[ÉUÅ[ìoò^ÇÃvalidation  -->
+	<!-- „É¶„Éº„Ç∂„ÉºÁôªÈå≤„ÅÆvalidation  -->
 	 	<form name="UserRegistActionForm">
 			<field property="userId" depends="maxlength, mask">
 			 	<msg name="maxlength" key="errors.maxlength" />
 				<msg name="mask" key="errors.haneisuu" />
-				<arg position="0" key="ïêémID" resource="false" />
+				<arg position="0" key="Ê≠¶Â£´ID" resource="false" />
 				<arg position="1" key="${var:maxlength}" resource="false" />
 				<var>
 					<var-name>maxlength</var-name>
@@ -152,7 +152,7 @@
 		 	 <field property="userPassword" depends="maxlength, mask">
 				<msg name="maxlength" key="errors.maxlength" />
 				<msg name="mask" key="errors.haneisuu" />
-				<arg position="0" key="ÉpÉXÉèÅ[Éh" resource="false" />
+				<arg position="0" key="„Éë„Çπ„ÉØ„Éº„Éâ" resource="false" />
 				<arg position="1" key="${var:maxlength}" resource="false" />
 				<var>
 					<var-name>maxlength</var-name>
@@ -165,13 +165,13 @@
 			</field>
 		</form>
 
-	<!-- ÉçÉOÉCÉìÇÃvalidation  -->
+	<!-- „É≠„Ç∞„Ç§„É≥„ÅÆvalidation  -->
 	 	<form name="LoginActionForm">
 			<field property="userId" depends="required, maxlength, mask">
 				<msg name="required" key="errors.required" />
 			 	<msg name="maxlength" key="errors.maxlength" />
 				<msg name="mask" key="errors.haneisuu" />
-				<arg position="0" key="ïêémID" resource="false" />
+				<arg position="0" key="Ê≠¶Â£´ID" resource="false" />
 				<arg position="1" key="${var:maxlength}" resource="false" />
 				<var>
 					<var-name>maxlength</var-name>
@@ -187,7 +187,7 @@
 				<msg name="required" key="errors.required" />
 				<msg name="maxlength" key="errors.maxlength" />
 				<msg name="mask" key="errors.haneisuu" />
-				<arg position="0" key="ÉpÉXÉèÅ[Éh" resource="false" />
+				<arg position="0" key="„Éë„Çπ„ÉØ„Éº„Éâ" resource="false" />
 				<arg position="1" key="${var:maxlength}" resource="false" />
 				<var>
 					<var-name>maxlength</var-name>
@@ -199,14 +199,14 @@
 				</var>
 			</field>
 		</form>
-		<!-- çÌèúÇÃvalidation  -->
+		<!-- ÂâäÈô§„ÅÆvalidation  -->
 	<form name="KohDeleteActionForm">
-			<!-- ïêémIDÇÃvalidation  -->
+			<!-- Ê≠¶Â£´ID„ÅÆvalidation  -->
 			<field property="bushiId" depends="required, maxlength, mask">
 				<msg name="required" key="errors.required" />
 				<msg name="maxlength" key="errors.keta" />
 				<msg name="mask" key="errors.hansuu" />
-				<arg position="0" key="ïêémID" resource="false" />
+				<arg position="0" key="Ê≠¶Â£´ID" resource="false" />
 				<arg position="1" key="${var:maxlength}" resource="false" />
 				<var>
 					<var-name>maxlength</var-name>

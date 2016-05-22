@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=Windows-31J" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="/tags/struts-html" prefix="html" %>
 <%@ taglib uri="/tags/struts-bean" prefix="bean" %>
 <%@ taglib uri="/tags/struts-logic" prefix="logic" %>
@@ -9,12 +9,12 @@
 <html:html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-		<title>•Žm’ </title>
+		<title>æ­¦å£«å¸³</title>
 		<link rel="shortcut icon" href="/koh/img/favicon.ico">
 		<SCRIPT type="text/javascript">
 		<!--
-		 //’l‚ª“ü—Í‚³‚ê‚È‚¯‚ê‚Î“o˜^ƒ{ƒ^ƒ“‰Ÿ‚¹‚È‚¢—p‚ÉŽd—l•ÏX
-		 // ƒtƒB[ƒ‹ƒh‚ª•ÏX‚³‚ê‚½ê‡‚Éˆ—‚·‚éŠÖ”
+		 //å€¤ãŒå…¥åŠ›ã•ã‚Œãªã‘ã‚Œã°ç™»éŒ²ãƒœã‚¿ãƒ³æŠ¼ã›ãªã„ç”¨ã«ä»•æ§˜å¤‰æ›´
+		 // ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ãŒå¤‰æ›´ã•ã‚ŒãŸå ´åˆã«å‡¦ç†ã™ã‚‹é–¢æ•°
 		function fieldChanged(){
 		     var userId = getField("userId");
 		     var password = getField("userPassword");
@@ -33,11 +33,11 @@
 		     }
 		 }
 
-		 // ƒtƒB[ƒ‹ƒh‚ðŽæ“¾‚·‚éŠÖ”
+		 // ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã‚’å–å¾—ã™ã‚‹é–¢æ•°
 		 function getField(fieldName){
 		      var field = document.getElementById(fieldName);
 		     if (field == undefined) {
-		         throw new Error("—v‘f‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ: " + fieldName);
+		         throw new Error("è¦ç´ ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“: " + fieldName);
 		     }
 		     return field;
 		 }
@@ -47,15 +47,15 @@
 	<body onload="fieldChanged();">
 	<html:form action="/UserRegistAction" method="POST">
 			<div style="text-align:center">
-				<h1>•Žm’ </h1>
-				<h2>V•Žm“o˜^</h2><br>
-				<h3>“o˜^‚·‚éID‚ÆƒpƒXƒ[ƒh‚ð“ü—Í‚³‚ê‚½‚µ</h3>
+				<h1>æ­¦å£«å¸³</h1>
+				<h2>æ–°æ­¦å£«ç™»éŒ²</h2><br>
+				<h3>ç™»éŒ²ã™ã‚‹IDã¨ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚’å…¥åŠ›ã•ã‚ŒãŸã—</h3>
 			</div>
-			<!-- css‚ðŽg—p‚µ‚Ä‚Ý‚é -->
+			<!-- cssã‚’ä½¿ç”¨ã—ã¦ã¿ã‚‹ -->
 				<br>
 
 				<div class="message_area" align="center">
-						<!-- ƒoƒŠƒf[ƒVƒ‡ƒ“ƒGƒ‰[ -->
+						<!-- ãƒãƒªãƒ‡ãƒ¼ã‚·ãƒ§ãƒ³ã‚¨ãƒ©ãƒ¼ -->
 					<html:errors />
 							<logic:notEmpty name="<%=SystemConst.REQUEST_KEY.MESSAGE_INFO%>" scope="request">
 								<bean:write name="<%=SystemConst.REQUEST_KEY.MESSAGE_INFO%>" scope="request" /><br>
@@ -66,11 +66,11 @@
 
 			<div style="text-align:center"><input type=text name="userId" value="" id="userId" onkeyup="fieldChanged();" onchange="fieldChanged();"/></div><br>
 
-			<div style="text-align:center">ƒpƒXƒ[ƒh</div><br>
+			<div style="text-align:center">ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰</div><br>
 
 			<div style="text-align:center"><input type=password name="userPassword" value="" id="userPassword" onkeyup="fieldChanged();" onchange="fieldChanged();"/></div><br>
 
-			<div style="text-align:center"><input type="submit" value="“o˜^" id="login"></div>
+			<div style="text-align:center"><input type="submit" value="ç™»éŒ²" id="login"></div>
 
 	</html:form>
 	</body>

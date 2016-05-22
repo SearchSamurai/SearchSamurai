@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=Windows-31J" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="/tags/struts-html" prefix="html" %>
 <%@ taglib uri="/tags/struts-bean" prefix="bean" %>
 <%@ taglib uri="/tags/struts-logic" prefix="logic" %>
@@ -16,28 +16,28 @@
 <link rel="StyleSheet" href="/koh/css/kohRegist.css" type="text/css">
 <html:html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=Windows-31J">
-		<title>•Žm’ Œ‹‰Ê</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>æ­¦å£«å¸³çµæžœ</title>
 		<link rel="shortcut icon" href="/koh/img/favicon.ico">
 	</head>
 	<body>
 		<html:form action="/KohRegistAction" method="POST">
 			<div style="text-align:center">
-				<h1>•Žm’ </h1>
-				<h2>•ŽmŒ‹‰Ê‰æ–Ê‚Å‚²‚´‚é</h2><br>
+				<h1>æ­¦å£«å¸³</h1>
+				<h2>æ­¦å£«çµæžœç”»é¢ã§ã”ã–ã‚‹</h2><br>
 			</div>
-				<!-- css‚ðŽg—p‚µ‚Ä‚Ý‚é -->
+				<!-- cssã‚’ä½¿ç”¨ã—ã¦ã¿ã‚‹ -->
 				<p>
 			<div class="message_area" align="center">
-						<!-- “o˜^‚Æ‚©íœ‚Æ‚©‚Å‚«‚½‚ç‚Æ‚Å‚«‚È‚©‚Á‚½‚ç -->
+						<!-- ç™»éŒ²ã¨ã‹å‰Šé™¤ã¨ã‹ã§ããŸã‚‰ã¨ã§ããªã‹ã£ãŸã‚‰ -->
 						<logic:notEmpty name="<%=SystemConst.REQUEST_KEY.MESSAGE_INFO%>" scope="request">
 							<bean:write name="<%=SystemConst.REQUEST_KEY.MESSAGE_INFO%>" scope="request" /><br>
 						</logic:notEmpty>
 			</div>
 			<div style="text-align:center">
-				<!-- ƒŠƒ“ƒN‚ð‚Â‚¯‚Ä‚Ý‚Ü‚µ‚½ -->
+				<!-- ãƒªãƒ³ã‚¯ã‚’ã¤ã‘ã¦ã¿ã¾ã—ãŸ -->
 					<ul  style="list-style-type:none;">
-						<li><a href="/koh/pages/parts/menu.jsp">ƒƒjƒ…[‰æ–Ê‚Ös‚«‚à‚¤‚µŒó</a></li><br>
+						<li><a href="/koh/pages/parts/menu.jsp">ãƒ¡ãƒ‹ãƒ¥ãƒ¼ç”»é¢ã¸è¡Œãã‚‚ã†ã—å€™</a></li><br>
 					</ul>
 			</div>
 		</html:form>

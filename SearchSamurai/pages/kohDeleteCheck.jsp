@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=Windows-31J" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="/tags/struts-html" prefix="html" %>
 <%@ taglib uri="/tags/struts-bean" prefix="bean" %>
 <%@ taglib uri="/tags/struts-logic" prefix="logic" %>
@@ -16,26 +16,26 @@
 <link rel="StyleSheet" href="/koh/css/kohRegist.css" type="text/css">
 <html:html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=Windows-31J">
-		<title>•Žm’ íœ</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>æ­¦å£«å¸³å‰Šé™¤</title>
 		<link rel="shortcut icon" href="/koh/img/favicon.ico">
 	</head>
 	<body>
 	<html:form action="/KohDeleteAction" method="POST">
-	<h1>•Žm’ </h1>
-	<h2>•ŽmíœŠm”F‰æ–Ê</h2><br>
+	<h1>æ­¦å£«å¸³</h1>
+	<h2>æ­¦å£«å‰Šé™¤ç¢ºèªç”»é¢</h2><br>
 
 
 	<table >
 
 					<tr align="left">
 						<td width="10%">ID</td>
-						<td width="10%">–¼‘O</td>
-						<td width="10%">”N—î</td>
-						<td width="10%">Š‘®</td>
-						<td width="10%">og</td>
-						<td width="10%">’P‰¿</td>
-						<td width="10%">•Ší</td>
+						<td width="10%">åå‰</td>
+						<td width="10%">å¹´é½¢</td>
+						<td width="10%">æ‰€å±ž</td>
+						<td width="10%">å‡ºèº«</td>
+						<td width="10%">å˜ä¾¡</td>
+						<td width="10%">æ­¦å™¨</td>
 					</tr>
 
 	<logic:iterate id="koh" name="<%=SystemConst.SESSION_KEY.KOH_DELETE_ACTION_FORM%>" property="kohDeleteList" >
@@ -66,8 +66,8 @@
 						</table>
 
 						<br>
-						ã‹L“à—e‚Åíœ‚µ‚Ü‚·B‹X‚µ‚¯‚ê‚Îíœ‚ð‰Ÿ‚µ\‚µŒóB<br>
-					<html:submit property="submit" value=" íœ " />
+						ä¸Šè¨˜å†…å®¹ã§å‰Šé™¤ã—ã¾ã™ã€‚å®œã—ã‘ã‚Œã°å‰Šé™¤ã‚’æŠ¼ã—ç”³ã—å€™ã€‚<br>
+					<html:submit property="submit" value=" å‰Šé™¤ " />
 						<br>
 
 

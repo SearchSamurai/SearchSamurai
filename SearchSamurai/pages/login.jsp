@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=Windows-31J"%>
+<%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib uri="/tags/struts-html" prefix="html"%>
 <%@ taglib uri="/tags/struts-bean" prefix="bean"%>
 <%@ taglib uri="/tags/struts-logic" prefix="logic" %>
@@ -7,12 +7,12 @@
 
 <html:html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=Windows-31J">
-		<title>•Žm’ </title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>æ­¦å£«å¸³</title>
 		<SCRIPT type="text/javascript">
 		<!--
-		 //’l‚ª“ü—Í‚³‚ê‚È‚¯‚ê‚ÎƒƒOƒCƒ“ƒ{ƒ^ƒ“‰Ÿ‚¹‚È‚¢—p‚É•ÏX
-		 // ƒtƒB[ƒ‹ƒh‚ª•ÏX‚³‚ê‚½ê‡‚Éˆ—‚·‚éŠÖ”
+		 //å€¤ãŒå…¥åŠ›ã•ã‚Œãªã‘ã‚Œã°ãƒ­ã‚°ã‚¤ãƒ³ãƒœã‚¿ãƒ³æŠ¼ã›ãªã„ç”¨ã«å¤‰æ›´
+		 // ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ãŒå¤‰æ›´ã•ã‚ŒãŸå ´åˆã«å‡¦ç†ã™ã‚‹é–¢æ•°
 		function fieldChanged(){
 		     var userId = getField("userId");
 		     var password = getField("userPassword");
@@ -31,16 +31,16 @@
 		     }
 		 }
 
-		 // ƒtƒB[ƒ‹ƒh‚ðŽæ“¾‚·‚éŠÖ”
+		 // ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã‚’å–å¾—ã™ã‚‹é–¢æ•°
 		 function getField(fieldName){
 		      var field = document.getElementById(fieldName);
 		     if (field == undefined) {
-		         throw new Error("—v‘f‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ: " + fieldName);
+		         throw new Error("è¦ç´ ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“: " + fieldName);
 		     }
 		     return field;
 		 }
-			//Ž©“®‚ÅƒƒbƒZ[ƒW‚ð•\Ž¦
-			myMsg = "‚æ‚­‚¼ŽQ‚ç‚ê‚½,,,‘´•û‚ð‘Ò‚Á‚Ä‚¨‚Á‚½‚¼,,,¼“ñ“ñ“ñi@OƒÖOj“ñ½";
+			//è‡ªå‹•ã§ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’è¡¨ç¤º
+			myMsg = "ã‚ˆããžå‚ã‚‰ã‚ŒãŸ,,,å…¶æ–¹ã‚’å¾…ã£ã¦ãŠã£ãŸãž,,,âŠ‚äºŒäºŒäºŒï¼ˆã€€ï¼¾Ï‰ï¼¾ï¼‰äºŒâŠƒ";
 			myCnt = 0;
 			function myFunc(){
 		     document.LoginActionForm.myFormMes.value = myMsg.substring( 0 , myCnt ) + "_";
@@ -53,19 +53,19 @@
 	<body onload="fieldChanged();">
 	<html:form action="/LoginAction" method="POST">
 		<div style="text-align:center">
-			<h1>•Žm’ </h1>
-				<h2>ƒƒOƒCƒ“</h2>
-				<!-- Ž©“®‚ÅƒƒbƒZ[ƒW‚ðo‚· -->
+			<h1>æ­¦å£«å¸³</h1>
+				<h2>ãƒ­ã‚°ã‚¤ãƒ³</h2>
+				<!-- è‡ªå‹•ã§ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å‡ºã™ -->
 			<p><input type="text" size="50" name="myFormMes"></p>
 			<script type="text/javascript"><!--
 			setInterval("myFunc()",200);
 			// -->
 			</script>
-				<p>ID‚ÆƒpƒXƒ[ƒh‚ð“ü—Í‚³‚ê‚½‚µ</p>
+				<p>IDã¨ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚’å…¥åŠ›ã•ã‚ŒãŸã—</p>
 		</div>
 
 
-	<!-- action‚ÅƒZƒbƒg‚µ‚½ƒƒbƒZ[ƒW -->
+	<!-- actionã§ã‚»ãƒƒãƒˆã—ãŸãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ -->
 	<div style="text-align:center">
 	<logic:notEmpty name="<%=SystemConst.REQUEST_KEY.MESSAGE_INFO%>" scope="request">
 		<bean:write name="<%=SystemConst.REQUEST_KEY.MESSAGE_INFO%>" scope="request" />
@@ -73,18 +73,18 @@
 	</div>
 	<br>
 
-		<div style="text-align:center">•ŽmID</div><br>
+		<div style="text-align:center">æ­¦å£«ID</div><br>
 
 		<div style="text-align:center"><input type=text name="userId" value="" id="userId" onkeyup="fieldChanged();" onchange="fieldChanged();"/></div><br>
 
-		<div style="text-align:center">ƒpƒXƒ[ƒh</div><br>
+		<div style="text-align:center">ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰</div><br>
 
 		<div style="text-align:center"><input type=password name="userPassword" value="" id="userPassword" onkeyup="fieldChanged();" onchange="fieldChanged();"/></div><br>
 
-		<div style="text-align:center"><input type="submit" value="ƒƒOƒCƒ“" id="login"></div><br>
+		<div style="text-align:center"><input type="submit" value="ãƒ­ã‚°ã‚¤ãƒ³" id="login"></div><br>
 
 
-		<div style="text-align:center">¦V‹K“o˜^‚·‚é•û‚Í<html:link href="<%=JspConst.JSP_FOWARD.USER_REGIST%>" >‚±‚¿‚ç</html:link></div>
+		<div style="text-align:center">â€»æ–°è¦ç™»éŒ²ã™ã‚‹æ–¹ã¯<html:link href="<%=JspConst.JSP_FOWARD.USER_REGIST%>" >ã“ã¡ã‚‰</html:link></div>
 
 	</html:form>
 	</body>

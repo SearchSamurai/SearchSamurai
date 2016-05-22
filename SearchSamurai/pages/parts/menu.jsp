@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=Windows-31J"%>
+<%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib uri="/tags/struts-html" prefix="html"%>
 <%@ taglib uri="/tags/struts-bean" prefix="bean"%>
 <%@ taglib uri="/tags/struts-logic" prefix="logic"%>
@@ -12,25 +12,25 @@
 
 <html:html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=Windows-31J">
-		<title>武士帳</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>豁ｦ螢ｫ蟶ｳ</title>
 		<link rel="shortcut icon" href="/koh/img/favicon.ico">
 	</head>
 	<body>
 
 	<html:form action="/LogoutAction" method="POST">
-	<h1>武士帳</h1>
-	<h2>メニュー</h2>
+	<h1>豁ｦ螢ｫ蟶ｳ</h1>
+	<h2>繝｡繝九Η繝ｼ</h2>
 
 	<ul type="disc">
-		<li><a href="/koh/pages/kohSearch.jsp">武士帳 検索</a><br><br></li>
-		<li><a href="/koh/pages/kohRegist.jsp">武士帳 登録</a><br><br></li>
-		<li><a href="/koh/pages/kohDelete.jsp">武士帳 削除</a><br><br></li>
-		<li><a href="/koh/pages/kohUserAll.jsp">武士帳 登録者一覧</a><br><br></li>
-		<li><a href="/koh/pages/kohjavascript.jsp">武士帳 javascript練習用</a><br><br></li>
+		<li><a href="/koh/pages/kohSearch.jsp">豁ｦ螢ｫ蟶ｳ 讀懃ｴ｢</a><br><br></li>
+		<li><a href="/koh/pages/kohRegist.jsp">豁ｦ螢ｫ蟶ｳ 逋ｻ骭ｲ</a><br><br></li>
+		<li><a href="/koh/pages/kohDelete.jsp">豁ｦ螢ｫ蟶ｳ 蜑企勁</a><br><br></li>
+		<li><a href="/koh/pages/kohUserAll.jsp">豁ｦ螢ｫ蟶ｳ 逋ｻ骭ｲ閠�荳隕ｧ</a><br><br></li>
+		<li><a href="/koh/pages/kohjavascript.jsp">豁ｦ螢ｫ蟶ｳ javascript邱ｴ鄙堤畑</a><br><br></li>
 	</ul>
 
-		<html:submit property="submit" value="ログアウト" />
+		<html:submit property="submit" value="繝ｭ繧ｰ繧｢繧ｦ繝�" />
 	</html:form>
 </body>
 </html:html>
