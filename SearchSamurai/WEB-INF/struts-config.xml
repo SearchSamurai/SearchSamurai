@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="WINDOWS-31J" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts-config PUBLIC
           "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
           "http://struts.apache.org/dtds/struts-config_1_3.dtd">
@@ -25,7 +25,7 @@
 			<forward name="error" path="/pages/error.jsp" />
 		</action>
 
-		<!-- ユーザー登録のアクションタグ -->
+		<!-- 繝ｦ繝ｼ繧ｶ繝ｼ逋ｻ骭ｲ縺ｮ繧｢繧ｯ繧ｷ繝ｧ繝ｳ繧ｿ繧ｰ -->
 		<action path="/UserRegistAction"
 				type="jp.co.koh.action.UserRegistAction"
 				name="UserRegistActionForm" scope="request"
@@ -47,7 +47,7 @@
 			<forward name="error" path="/error.jsp" />
 		</action>
 
-		<!-- 登録のアクションタグ -->
+		<!-- 逋ｻ骭ｲ縺ｮ繧｢繧ｯ繧ｷ繝ｧ繝ｳ繧ｿ繧ｰ -->
 		<action path="/KohRegistAction"
 		        type="jp.co.koh.action.KohRegistAction"
 		        name="KohRegistActionForm"
@@ -57,7 +57,7 @@
 
 		</action>
 
-		<!-- 登録checkのアクションタグ -->
+		<!-- 逋ｻ骭ｲcheck縺ｮ繧｢繧ｯ繧ｷ繝ｧ繝ｳ繧ｿ繧ｰ -->
 		<action path="/KohRegistCheckAction"
 		        type="jp.co.koh.action.KohRegistCheckAction"
 		        name="KohRegistActionForm"
@@ -68,7 +68,7 @@
 			<forward name="error" path="/pages/kohRegist.jsp" />
 		</action>
 
-		<!-- 削除checkのアクションタグ -->
+		<!-- 蜑企勁check縺ｮ繧｢繧ｯ繧ｷ繝ｧ繝ｳ繧ｿ繧ｰ -->
 		<action path="/KohDeleteCheckAction"
 		        type="jp.co.koh.action.KohDeleteCheckAction"
 		        name="KohDeleteActionForm"
@@ -79,7 +79,7 @@
 			<forward name="error" path="/pages/kohDelete.jsp" />
 		</action>
 
-		<!-- 削除のアクションタグ -->
+		<!-- 蜑企勁縺ｮ繧｢繧ｯ繧ｷ繝ｧ繝ｳ繧ｿ繧ｰ -->
 		<action path="/KohDeleteAction"
 		        type="jp.co.koh.action.KohDeleteAction"
 		        name="KohDeleteActionForm"
@@ -89,7 +89,7 @@
 		</action>
 
 
-		<!-- 検索のアクションタグ -->
+		<!-- 讀懃ｴ｢縺ｮ繧｢繧ｯ繧ｷ繝ｧ繝ｳ繧ｿ繧ｰ -->
 		<action path="/KohSearchAction"
 		        type="jp.co.koh.action.KohSearchAction"
 		        name="KohSearchActionForm"
@@ -97,7 +97,7 @@
 			<forward name="success" path="/pages/kohSearch.jsp" />
 		</action>
 
-		<!-- User一覧のアクションタグ -->
+		<!-- User荳隕ｧ縺ｮ繧｢繧ｯ繧ｷ繝ｧ繝ｳ繧ｿ繧ｰ -->
 		<action path="/KohUserAllAction"
 		        type="jp.co.koh.action.KohUserAllAction"
 		        name="LoginActionForm"
@@ -106,7 +106,7 @@
 			<forward name="success" path="/pages/kohUserAll.jsp" />
 		</action>
 
-		<!-- javascript練習用ののアクションタグ -->
+		<!-- javascript邱ｴ鄙堤畑縺ｮ縺ｮ繧｢繧ｯ繧ｷ繝ｧ繝ｳ繧ｿ繧ｰ -->
 		<action path="/KohUserAllAction"
 		        type="jp.co.koh.action.KohUserAllAction"
 		        name="LoginActionForm"
@@ -119,8 +119,8 @@
 	</action-mappings>
 
 <!-- ======================================== Message Resources Definitions -->
-    <!--プロパティファイルのある場所を指定します-->
-    <!--parameterはpathを含むファイル名を入れます-->
+    <!--繝励Ο繝代ユ繧｣繝輔ぃ繧､繝ｫ縺ｮ縺ゅｋ蝣ｴ謇繧呈欠螳壹＠縺ｾ縺�-->
+    <!--parameter縺ｯpath繧貞性繧繝輔ぃ繧､繝ｫ蜷阪ｒ蜈･繧後∪縺�-->
 	<message-resources parameter="application" />
 <!-- =================================================== Validator plugin -->
 	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
