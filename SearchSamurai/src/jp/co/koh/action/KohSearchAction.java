@@ -41,6 +41,8 @@ public final class KohSearchAction extends BaseAction {
 
 		try {
 
+			startTransaction();
+
 			//form(検索画面で入力した値)を取得する
 			kohSearchActionForm = (KohSearchActionForm) form;
 
@@ -97,6 +99,8 @@ public final class KohSearchAction extends BaseAction {
 
 				//アクションフォームにセットされた値を元にDBからレコードを取得する
 				List<Koh> kohSearchList = kohDao.findKoh(kohSearchActionForm);
+				commit();
+
 
 				//検索結果リストをセットする
 				kohSearchActionForm.setKohSearchList(kohSearchList);
@@ -106,6 +110,8 @@ public final class KohSearchAction extends BaseAction {
 
 				//アクションフォームにセットされた値を元にDBからレコードを取得する
 				List<Koh> kohSearchList = kohDao.findKohSortByInsertDate(kohSearchActionForm);
+				commit();
+
 
 				//検索結果リストをセットする
 				kohSearchActionForm.setKohSearchList(kohSearchList);
